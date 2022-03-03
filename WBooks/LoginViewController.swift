@@ -15,7 +15,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func logInButton(_ sender: UIButton) {
-        print("You just touch the log in button")
+        present(LibraryViewController(), animated: true)
     }
 }
 

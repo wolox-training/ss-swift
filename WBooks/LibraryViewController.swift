@@ -15,19 +15,22 @@ class LibraryViewController: UITableViewController {
         tableView.register(nib, forCellReuseIdentifier: "LibraryViewCell")
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
 
     // MARK: - Table view data source
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 90
+    }
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // #warning Incomplete implementation, return the number of rows
-        let cell = tableView.dequeueReusableCell(withIdentifier: "LibraryViewCell", for: <#T##IndexPath#>) as! LibraryViewCell
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LibraryViewCell", for: indexPath) as! LibraryViewCell
         return cell
     }
     
