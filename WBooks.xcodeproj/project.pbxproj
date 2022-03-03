@@ -11,6 +11,8 @@
 		09CE135FA75FB443A302CA80 /* Pods_WBooksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EC1D3294D64D1359D2C3D3 /* Pods_WBooksTests.framework */; };
 		3F8A41CD743A174F859CBC48 /* Pods_WBooks_WBooksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 657969001D610F5E1CE1C283 /* Pods_WBooks_WBooksUITests.framework */; };
 		D1150D6327CFEE9700BF7A5C /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1150D6227CFEE9700BF7A5C /* LibraryViewController.swift */; };
+		D1150D6627D0F42600BF7A5C /* LibraryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1150D6427D0F42600BF7A5C /* LibraryViewCell.swift */; };
+		D1150D6727D0F42600BF7A5C /* LibraryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1150D6527D0F42600BF7A5C /* LibraryViewCell.xib */; };
 		D122291A279B02C90086313A /* ConfigurationFiles in Resources */ = {isa = PBXBuildFile; fileRef = D1222919279B02C80086313A /* ConfigurationFiles */; };
 		D1DC758A2799E69B002BB45E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DC75892799E69B002BB45E /* AppDelegate.swift */; };
 		D1DC758C2799E69B002BB45E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DC758B2799E69B002BB45E /* SceneDelegate.swift */; };
@@ -50,6 +52,8 @@
 		657969001D610F5E1CE1C283 /* Pods_WBooks_WBooksUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBooks_WBooksUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66EC1D3294D64D1359D2C3D3 /* Pods_WBooksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBooksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1150D6227CFEE9700BF7A5C /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		D1150D6427D0F42600BF7A5C /* LibraryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewCell.swift; sourceTree = "<group>"; };
+		D1150D6527D0F42600BF7A5C /* LibraryViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryViewCell.xib; sourceTree = "<group>"; };
 		D1222919279B02C80086313A /* ConfigurationFiles */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ConfigurationFiles; sourceTree = SOURCE_ROOT; };
 		D18D8B38279B37AA004237FB /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Config.xcconfig; path = ConfigurationFiles/Config.xcconfig; sourceTree = "<group>"; };
 		D1DC75862799E69B002BB45E /* WBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +148,8 @@
 				D1DC75942799E6A3002BB45E /* LaunchScreen.storyboard */,
 				D1DC75972799E6A3002BB45E /* Info.plist */,
 				D1150D6227CFEE9700BF7A5C /* LibraryViewController.swift */,
+				D1150D6427D0F42600BF7A5C /* LibraryViewCell.swift */,
+				D1150D6527D0F42600BF7A5C /* LibraryViewCell.xib */,
 			);
 			path = WBooks;
 			sourceTree = "<group>";
@@ -284,6 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1150D6727D0F42600BF7A5C /* LibraryViewCell.xib in Resources */,
 				D1DC75962799E6A3002BB45E /* LaunchScreen.storyboard in Resources */,
 				D122291A279B02C90086313A /* ConfigurationFiles in Resources */,
 				D1DC75932799E6A3002BB45E /* Assets.xcassets in Resources */,
@@ -419,6 +426,7 @@
 				D1DC758A2799E69B002BB45E /* AppDelegate.swift in Sources */,
 				D1150D6327CFEE9700BF7A5C /* LibraryViewController.swift in Sources */,
 				D1DC758C2799E69B002BB45E /* SceneDelegate.swift in Sources */,
+				D1150D6627D0F42600BF7A5C /* LibraryViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
