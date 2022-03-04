@@ -48,6 +48,7 @@
                                 <connections>
                                     <action selector="logInButton:" destination="eZb-nk-OjT" eventType="touchUpInside" id="j5o-5m-W3a"/>
                                     <action selector="logInButton:forEvent:" destination="VqQ-9e-b6r" eventType="touchUpInside" id="vwN-sA-rzU"/>
+                                    <segue destination="PGl-ph-tDp" kind="show" id="uUG-lw-rVp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -79,22 +80,34 @@
             <point key="canvasLocation" x="600" y="72"/>
         </scene>
         <!--Library View Controller-->
-        <scene sceneID="jtP-UB-Oq1">
+        <scene sceneID="IEa-OI-xc5">
             <objects>
-                <tableViewController id="nyM-C4-NLx" customClass="LibraryViewController" customModule="WBooks" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Y3n-9f-vIU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                <viewController id="PGl-ph-tDp" customClass="LibraryViewController" customModule="WBooks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yIM-eB-5DO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fRw-Pk-31P">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CTv-z1-Dy7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <connections>
-                            <outlet property="dataSource" destination="nyM-C4-NLx" id="dej-2I-hUg"/>
-                            <outlet property="delegate" destination="nyM-C4-NLx" id="K7v-li-f0f"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZXM-cX-8b7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="fRw-Pk-31P" firstAttribute="top" secondItem="CTv-z1-Dy7" secondAttribute="top" id="hgY-nQ-9ep"/>
+                            <constraint firstItem="fRw-Pk-31P" firstAttribute="leading" secondItem="CTv-z1-Dy7" secondAttribute="leading" id="kMo-uH-Lb6"/>
+                            <constraint firstItem="fRw-Pk-31P" firstAttribute="trailing" secondItem="CTv-z1-Dy7" secondAttribute="trailing" id="lxS-7P-FPg"/>
+                            <constraint firstItem="fRw-Pk-31P" firstAttribute="bottom" secondItem="CTv-z1-Dy7" secondAttribute="bottom" id="pdT-Bi-TaF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="fRw-Pk-31P" id="jn8-D9-1og"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c6f-oS-biT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1335" y="72"/>
+            <point key="canvasLocation" x="1295.6521739130435" y="71.739130434782609"/>
         </scene>
     </scenes>
     <color key="tintColor" name="AccentColor"/>
