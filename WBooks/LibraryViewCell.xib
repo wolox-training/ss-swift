@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -48,10 +48,10 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="bookAuthor" destination="psH-9h-Zwy" id="oo7-aj-cGC"/>
-                <outlet property="bookCover" destination="tH4-4F-qEy" id="Y3U-N6-KT3"/>
-                <outlet property="bookTitle" destination="1qP-t7-RIB" id="Gg2-7A-VYC"/>
-                <outlet property="cellView" destination="OOV-TC-JEJ" id="a9L-Y3-Lp4"/>
+                <outlet property="bookAuthor" destination="1qP-t7-RIB" id="kSR-Wk-afA"/>
+                <outlet property="bookCover" destination="tH4-4F-qEy" id="aXn-bs-yBK"/>
+                <outlet property="bookTitle" destination="psH-9h-Zwy" id="Ric-6v-qJR"/>
+                <outlet property="cellView" destination="OOV-TC-JEJ" id="jPv-6F-OtY"/>
             </connections>
             <point key="canvasLocation" x="-125" y="-84"/>
         </tableViewCell>

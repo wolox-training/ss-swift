@@ -8,12 +8,13 @@
 import UIKit
 
 class LibraryViewCell: UITableViewCell {
-
-
-    @IBOutlet var bookTitle: UILabel!
-    @IBOutlet var bookCover: UIImageView!
-    @IBOutlet var bookAuthor: UILabel!
-    @IBOutlet var cellView: UIView! {
+    @IBOutlet weak var bookTitle: UILabel!
+    
+    @IBOutlet weak var bookCover: UIImageView!
+    
+    @IBOutlet weak var bookAuthor: UILabel!
+    
+    @IBOutlet weak var cellView: UIView! {
         didSet {
             cellView.backgroundColor = .white
             cellView.layer.cornerRadius = 5
@@ -21,6 +22,7 @@ class LibraryViewCell: UITableViewCell {
     }
     
     override func layoutSubviews() {
+        super.layoutSubviews()
         let contentInset = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
         cellView.frame = cellView.frame.inset(by: contentInset)
     }
@@ -35,5 +37,4 @@ class LibraryViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 }
