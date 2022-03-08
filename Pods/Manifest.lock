@@ -1,16 +1,20 @@
 PODS:
   - Alamofire (5.5.0)
+  - WolmoCore (6.3.0)
 
 DEPENDENCIES:
   - Alamofire
+  - WolmoCore
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - WolmoCore
 
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  WolmoCore: 4fd7643bc03d1e47316bba77eb157d2904003415
 
-PODFILE CHECKSUM: e4bbdba5f74041474030d6c1dbbbe3a75ed537d1
+PODFILE CHECKSUM: 0e9402e8cbc8d710a9c77127fae0dde05735d0bf
 
 COCOAPODS: 1.11.2

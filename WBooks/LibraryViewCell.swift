@@ -23,8 +23,8 @@ class LibraryViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        let contentInset = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
-        cellView.frame = cellView.frame.inset(by: contentInset)
+        let contentInset = UIEdgeInsets(top: 5, left: 20, bottom: 5, right: 20)
+        cellView.layer.frame = cellView.frame.inset(by: contentInset)
     }
 
     override func awakeFromNib() {

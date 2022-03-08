@@ -7,6 +7,7 @@ target 'WBooks' do
 
   # Pods for WBooks
   pod 'Alamofire'
+  pod 'WolmoCore'
 
   target 'WBooksTests' do
     inherit! :search_paths
