@@ -43,7 +43,7 @@ class LibraryViewController: UITableViewController {
         let title = UILabel()
         title.font = UIFont.boldSystemFont(ofSize: 17)
         title.textColor = .white
-        title.text = "LIBRARY"
+        title.text = "LIBRARY_VIEW_TITLE".localized()
         //title.frame = CGRect(x: 0, y: 0, width: 71, height: 20)
         title.backgroundColor = .clear
         navigationItem.titleView = title
