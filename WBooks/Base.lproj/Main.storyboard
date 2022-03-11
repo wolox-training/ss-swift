@@ -48,6 +48,7 @@
                                 <connections>
                                     <action selector="logInButton:" destination="eZb-nk-OjT" eventType="touchUpInside" id="j5o-5m-W3a"/>
                                     <action selector="logInButton:forEvent:" destination="VqQ-9e-b6r" eventType="touchUpInside" id="vwN-sA-rzU"/>
+                                    <segue destination="PGl-ph-tDp" kind="show" id="uUG-lw-rVp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -77,6 +78,33 @@
                 <exit id="VqQ-9e-b6r" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="600" y="72"/>
+        </scene>
+        <!--Library View Controller-->
+        <scene sceneID="IEa-OI-xc5">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="PGl-ph-tDp" customClass="LibraryViewController" customModule="WBooks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yIM-eB-5DO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" id="fRw-Pk-31P" userLabel="tableView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CTv-z1-Dy7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fRw-Pk-31P" firstAttribute="top" secondItem="yIM-eB-5DO" secondAttribute="top" id="hgY-nQ-9ep"/>
+                            <constraint firstItem="fRw-Pk-31P" firstAttribute="leading" secondItem="CTv-z1-Dy7" secondAttribute="leading" id="kMo-uH-Lb6"/>
+                            <constraint firstItem="fRw-Pk-31P" firstAttribute="trailing" secondItem="CTv-z1-Dy7" secondAttribute="trailing" id="lxS-7P-FPg"/>
+                            <constraint firstItem="fRw-Pk-31P" firstAttribute="bottom" secondItem="yIM-eB-5DO" secondAttribute="bottom" id="pdT-Bi-TaF"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c6f-oS-biT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1295.6521739130435" y="71.739130434782609"/>
         </scene>
     </scenes>
     <color key="tintColor" name="AccentColor"/>
