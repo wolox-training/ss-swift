@@ -7,3 +7,9 @@
 
 /* LIBRARY VIEW */
 "LIBRARY_VIEW_TITLE" = "BIBLIOTECA";
+
+/* TAB BAR */
+"LIBRARY_TAB_BAR_BUTTON" = "Biblioteca";
+"WISHLIST_TAB_BAR_BUTTON" = "Lista de Deseos";
+"SUGGEST_TAB_BAR_BUTTON" = "Sugerir";
+"RENTALS_TAB_BAR_BUTTON" = "Alquileres";

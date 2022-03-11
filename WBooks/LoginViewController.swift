@@ -8,16 +8,15 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
     @IBAction func logInButton(_ sender: UIButton) {
-        let library = UINavigationController(rootViewController: LibraryViewController())
-        library.modalPresentationStyle = .fullScreen
-        present(library, animated: true)
+        let tabBar = TabBarController()
+        tabBar.modalPresentationStyle = .fullScreen
+        present(tabBar, animated: true)
     }
 }
 
