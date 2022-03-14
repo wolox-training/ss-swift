@@ -14,6 +14,8 @@
 		D1150D6627D0F42600BF7A5C /* LibraryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1150D6427D0F42600BF7A5C /* LibraryViewCell.swift */; };
 		D1150D6727D0F42600BF7A5C /* LibraryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1150D6527D0F42600BF7A5C /* LibraryViewCell.xib */; };
 		D122291A279B02C90086313A /* ConfigurationFiles in Resources */ = {isa = PBXBuildFile; fileRef = D1222919279B02C80086313A /* ConfigurationFiles */; };
+		D13761CD27DFC5630078F1D0 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13761CC27DFC5630078F1D0 /* Book.swift */; };
+		D13761D127DFCFC70078F1D0 /* BookCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13761D027DFCFC70078F1D0 /* BookCellViewModel.swift */; };
 		D187883727DA744C005399D4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D187883927DA744C005399D4 /* Localizable.strings */; };
 		D187883C27DA8A5F005399D4 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D187883B27DA8A5F005399D4 /* TabBarController.swift */; };
 		D1DC758A2799E69B002BB45E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DC75892799E69B002BB45E /* AppDelegate.swift */; };
@@ -57,6 +59,8 @@
 		D1150D6427D0F42600BF7A5C /* LibraryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewCell.swift; sourceTree = "<group>"; };
 		D1150D6527D0F42600BF7A5C /* LibraryViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryViewCell.xib; sourceTree = "<group>"; };
 		D1222919279B02C80086313A /* ConfigurationFiles */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ConfigurationFiles; sourceTree = SOURCE_ROOT; };
+		D13761CC27DFC5630078F1D0 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		D13761D027DFCFC70078F1D0 /* BookCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCellViewModel.swift; sourceTree = "<group>"; };
 		D187883827DA744C005399D4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D187883A27DA7533005399D4 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D187883B27DA8A5F005399D4 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -118,6 +122,33 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		D13761CB27DFC5480078F1D0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D13761CC27DFC5630078F1D0 /* Book.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D13761CE27DFC7F20078F1D0 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				D1150D6227CFEE9700BF7A5C /* LibraryViewController.swift */,
+				D13761CF27DFC7FF0078F1D0 /* BookCell */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		D13761CF27DFC7FF0078F1D0 /* BookCell */ = {
+			isa = PBXGroup;
+			children = (
+				D1150D6427D0F42600BF7A5C /* LibraryViewCell.swift */,
+				D1150D6527D0F42600BF7A5C /* LibraryViewCell.xib */,
+				D13761D027DFCFC70078F1D0 /* BookCellViewModel.swift */,
+			);
+			path = BookCell;
+			sourceTree = "<group>";
+		};
 		D1DC757D2799E69B002BB45E = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +176,8 @@
 		D1DC75882799E69B002BB45E /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				D13761CE27DFC7F20078F1D0 /* Library */,
+				D13761CB27DFC5480078F1D0 /* Models */,
 				D1DC75892799E69B002BB45E /* AppDelegate.swift */,
 				D1DC758B2799E69B002BB45E /* SceneDelegate.swift */,
 				D1DC758D2799E69B002BB45E /* LoginViewController.swift */,
@@ -152,9 +185,6 @@
 				D1DC75922799E6A3002BB45E /* Assets.xcassets */,
 				D1DC75942799E6A3002BB45E /* LaunchScreen.storyboard */,
 				D1DC75972799E6A3002BB45E /* Info.plist */,
-				D1150D6227CFEE9700BF7A5C /* LibraryViewController.swift */,
-				D1150D6427D0F42600BF7A5C /* LibraryViewCell.swift */,
-				D1150D6527D0F42600BF7A5C /* LibraryViewCell.xib */,
 				D187883927DA744C005399D4 /* Localizable.strings */,
 				D187883B27DA8A5F005399D4 /* TabBarController.swift */,
 			);
@@ -432,7 +462,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1DC758E2799E69B002BB45E /* LoginViewController.swift in Sources */,
+				D13761D127DFCFC70078F1D0 /* BookCellViewModel.swift in Sources */,
 				D1DC758A2799E69B002BB45E /* AppDelegate.swift in Sources */,
+				D13761CD27DFC5630078F1D0 /* Book.swift in Sources */,
 				D1150D6327CFEE9700BF7A5C /* LibraryViewController.swift in Sources */,
 				D187883C27DA8A5F005399D4 /* TabBarController.swift in Sources */,
 				D1DC758C2799E69B002BB45E /* SceneDelegate.swift in Sources */,
