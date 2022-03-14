@@ -44,13 +44,10 @@ class LibraryViewController: UITableViewController {
         title.font = UIFont.boldSystemFont(ofSize: 17)
         title.textColor = .white
         title.text = "LIBRARY"
-        //title.frame = CGRect(x: 0, y: 0, width: 71, height: 20)
         title.backgroundColor = .clear
         navigationItem.titleView = title
         let notifications = UIBarButtonItem(image: UIImage(named: "ic_notifications"), style: .plain, target: self, action: nil)
-        //notifications.customView?.frame = CGRect(x: 0, y: 0, width: 17.22, height: 17.94)
         let search = UIBarButtonItem(image: UIImage(named: "ic_search"), style: .plain, target: self, action: nil)
-        //search.customView?.frame = CGRect(x: 0, y: 0, width: 18, height: 18)
         setNavigationLeftButtons([notifications])
         setNavigationRightButtons([search])
 
