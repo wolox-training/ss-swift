@@ -45,7 +45,7 @@ class LibraryViewController: UITableViewController {
         let title = UILabel()
         title.font = UIFont.boldSystemFont(ofSize: 17)
         title.textColor = .white
-        title.text = "LIBRARY"
+        title.text = "LIBRARY_VIEW_TITLE".localized()
         title.backgroundColor = .clear
         navigationItem.titleView = title
         let notifications = UIBarButtonItem(image: UIImage(named: "ic_notifications"), style: .plain, target: self, action: nil)
