@@ -38,8 +38,10 @@ class LibraryViewController: UITableViewController {
         
         tableView.register(UINib(nibName: cellIdentifier, bundle: nil), forCellReuseIdentifier: cellIdentifier)
         tableView.backgroundColor = UIColor(hex: "#EAF6FA")
-        
-        // NavBar
+        setUpNavBar()
+    }
+    
+    func setUpNavBar() {
         let title = UILabel()
         title.font = UIFont.boldSystemFont(ofSize: 17)
         title.textColor = .white
