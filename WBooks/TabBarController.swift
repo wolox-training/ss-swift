@@ -36,10 +36,5 @@ class TabBarController: UITabBarController {
         tabBar.backgroundColor = .white
         tabBar.barTintColor = .white
         viewControllers = [library, wishlist, suggest, myRentals]
-        
-        // Do any additional setup after loading the view.
     }
-    
-    
-
 }
