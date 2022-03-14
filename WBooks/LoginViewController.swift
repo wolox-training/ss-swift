@@ -15,7 +15,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func logInButton(_ sender: UIButton) {
-        let library = LibraryViewController()
+        let library = UINavigationController(rootViewController: LibraryViewController())
         library.modalPresentationStyle = .fullScreen
         present(library, animated: true)
     }

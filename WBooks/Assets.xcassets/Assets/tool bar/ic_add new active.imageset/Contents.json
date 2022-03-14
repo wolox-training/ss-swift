@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "ic_add new active.png",
+      "filename" : "Group 14.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "ic_add new active.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "ic_add new active@3x.png.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

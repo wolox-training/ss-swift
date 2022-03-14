@@ -38,6 +38,28 @@ class LibraryViewController: UITableViewController {
         
         tableView.register(UINib(nibName: cellIdentifier, bundle: nil), forCellReuseIdentifier: cellIdentifier)
         tableView.backgroundColor = UIColor(hex: "#EAF6FA")
+        setUpNavBar()
+    }
+    
+    private func setUpNavBar() {
+        let title = UILabel()
+        title.font = UIFont.boldSystemFont(ofSize: 17)
+        title.textColor = .white
+        title.text = "LIBRARY"
+        title.backgroundColor = .clear
+        navigationItem.titleView = title
+        let notifications = UIBarButtonItem(image: UIImage(named: "ic_notifications"), style: .plain, target: self, action: nil)
+        let search = UIBarButtonItem(image: UIImage(named: "ic_search"), style: .plain, target: self, action: nil)
+        setNavigationLeftButtons([notifications])
+        setNavigationRightButtons([search])
+
+        let navbarAppearance = UINavigationBarAppearance()
+        navbarAppearance.backgroundColor = UIColor(hex: "#00ADEE")
+
+        navigationController?.navigationBar.isTranslucent = false
+        
+        navigationController?.navigationBar.standardAppearance = navbarAppearance
+        navigationController?.navigationBar.scrollEdgeAppearance = navbarAppearance
     }
 
     // MARK: - Table view data source
