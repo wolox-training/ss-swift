@@ -41,7 +41,7 @@ class LibraryViewController: UITableViewController {
         setUpNavBar()
     }
     
-    func setUpNavBar() {
+    private func setUpNavBar() {
         let title = UILabel()
         title.font = UIFont.boldSystemFont(ofSize: 17)
         title.textColor = .white
