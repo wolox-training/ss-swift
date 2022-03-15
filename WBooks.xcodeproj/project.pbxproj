@@ -15,6 +15,7 @@
 		D1150D6727D0F42600BF7A5C /* LibraryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1150D6527D0F42600BF7A5C /* LibraryViewCell.xib */; };
 		D122291A279B02C90086313A /* ConfigurationFiles in Resources */ = {isa = PBXBuildFile; fileRef = D1222919279B02C80086313A /* ConfigurationFiles */; };
 		D187883727DA744C005399D4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D187883927DA744C005399D4 /* Localizable.strings */; };
+		D187883C27DA8A5F005399D4 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D187883B27DA8A5F005399D4 /* TabBarController.swift */; };
 		D1DC758A2799E69B002BB45E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DC75892799E69B002BB45E /* AppDelegate.swift */; };
 		D1DC758C2799E69B002BB45E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DC758B2799E69B002BB45E /* SceneDelegate.swift */; };
 		D1DC758E2799E69B002BB45E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DC758D2799E69B002BB45E /* LoginViewController.swift */; };
@@ -58,6 +59,7 @@
 		D1222919279B02C80086313A /* ConfigurationFiles */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ConfigurationFiles; sourceTree = SOURCE_ROOT; };
 		D187883827DA744C005399D4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D187883A27DA7533005399D4 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D187883B27DA8A5F005399D4 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		D18D8B38279B37AA004237FB /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Config.xcconfig; path = ConfigurationFiles/Config.xcconfig; sourceTree = "<group>"; };
 		D1DC75862799E69B002BB45E /* WBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1DC75892799E69B002BB45E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				D1150D6427D0F42600BF7A5C /* LibraryViewCell.swift */,
 				D1150D6527D0F42600BF7A5C /* LibraryViewCell.xib */,
 				D187883927DA744C005399D4 /* Localizable.strings */,
+				D187883B27DA8A5F005399D4 /* TabBarController.swift */,
 			);
 			path = WBooks;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				D1DC758E2799E69B002BB45E /* LoginViewController.swift in Sources */,
 				D1DC758A2799E69B002BB45E /* AppDelegate.swift in Sources */,
 				D1150D6327CFEE9700BF7A5C /* LibraryViewController.swift in Sources */,
+				D187883C27DA8A5F005399D4 /* TabBarController.swift in Sources */,
 				D1DC758C2799E69B002BB45E /* SceneDelegate.swift in Sources */,
 				D1150D6627D0F42600BF7A5C /* LibraryViewCell.swift in Sources */,
 			);
