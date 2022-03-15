@@ -8,33 +8,25 @@
 import UIKit
 
 class TabBarController: UITabBarController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let library = UINavigationController(rootViewController: LibraryViewController())
-        library.tabBarItem = UITabBarItem()
-        library.tabBarItem.title = "LIBRARY_TAB_BAR_BUTTON".localized()
-        library.tabBarItem.image = UIImage(named: "ic_library active")
-        library.tabBarItem.tag = 0
-        let wishlist = UINavigationController(rootViewController: LibraryViewController())
-        wishlist.tabBarItem = UITabBarItem()
-        wishlist.tabBarItem.title = "WISHLIST_TAB_BAR_BUTTON".localized()
-        wishlist.tabBarItem.image = UIImage(named: "ic_wishlist")
-        wishlist.tabBarItem.tag = 1
-        let suggest = UINavigationController(rootViewController: LibraryViewController())
-        suggest.tabBarItem = UITabBarItem()
-        suggest.tabBarItem.title = "SUGGEST_TAB_BAR_BUTTON".localized()
-        suggest.tabBarItem.image = UIImage(named: "ic_add new")
-        suggest.tabBarItem.tag = 2
-        let myRentals = UINavigationController(rootViewController: LibraryViewController())
-        myRentals.tabBarItem = UITabBarItem()
-        myRentals.tabBarItem.title = "RENTALS_TAB_BAR_BUTTON".localized()
-        myRentals.tabBarItem.image = UIImage(named: "ic_myrentals")
-        myRentals.tabBarItem.tag = 3
+        let library = setUpTabBarItem(navigation: "library",title: "LIBRARY_TAB_BAR_BUTTON",image: "ic_library active",tag: 0,controller: LibraryViewController())
+        let wishlist = setUpTabBarItem(navigation: "wishlist",title: "WISHLIST_TAB_BAR_BUTTON",image: "ic_wishlist",tag: 1,controller: LibraryViewController())
+        let suggest = setUpTabBarItem(navigation: "suggest",title: "SUGGEST_TAB_BAR_BUTTON",image: "ic_add new",tag: 2,controller: LibraryViewController())
+        let myRentals = setUpTabBarItem(navigation: "myRentals",title: "RENTALS_TAB_BAR_BUTTON",image: "ic_myrentals",tag: 3,controller: LibraryViewController())
         
         tabBar.backgroundColor = .white
         tabBar.barTintColor = .white
         viewControllers = [library, wishlist, suggest, myRentals]
+    }
+    
+    private func setUpTabBarItem(navigation: String, title: String, image: String, tag: Int, controller: UITableViewController) -> UINavigationController {
+        let navigation = UINavigationController(rootViewController: controller)
+        navigation.tabBarItem = UITabBarItem()
+        navigation.tabBarItem.title = title.localized()
+        navigation.tabBarItem.image = UIImage(named: image)
+        navigation.tabBarItem.tag = tag
+        return navigation
     }
 }
