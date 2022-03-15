@@ -9,18 +9,15 @@ import UIKit
 
 class LibraryViewCell: UITableViewCell {
     @IBOutlet weak var bookTitle: UILabel!
-    
     @IBOutlet weak var bookCover: UIImageView!
-    
     @IBOutlet weak var bookAuthor: UILabel!
-    
     @IBOutlet weak var cellView: UIView! {
         didSet {
             cellView.backgroundColor = .white
             cellView.layer.cornerRadius = 5
         }
     }
-    
+
     override func layoutSubviews() {
         super.layoutSubviews()
         let contentInset = UIEdgeInsets(top: 5, left: 20, bottom: 5, right: 20)

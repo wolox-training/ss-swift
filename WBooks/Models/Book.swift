@@ -8,12 +8,10 @@
 import UIKit
 
 class Book {
-    // MARK: -Properties
     let author: String
     let title: String
     let imageUrl: URL?
-    
-    init(author: String, title: String, imageUrl: URL?){
+    init(author: String, title: String, imageUrl: URL?) {
         self.author = author
         self.title = title
         self.imageUrl = imageUrl

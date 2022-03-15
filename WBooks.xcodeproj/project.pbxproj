@@ -15,7 +15,7 @@
 		D1150D6727D0F42600BF7A5C /* LibraryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1150D6527D0F42600BF7A5C /* LibraryViewCell.xib */; };
 		D122291A279B02C90086313A /* ConfigurationFiles in Resources */ = {isa = PBXBuildFile; fileRef = D1222919279B02C80086313A /* ConfigurationFiles */; };
 		D13761CD27DFC5630078F1D0 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13761CC27DFC5630078F1D0 /* Book.swift */; };
-		D13761D127DFCFC70078F1D0 /* BookCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13761D027DFCFC70078F1D0 /* BookCellViewModel.swift */; };
+		D13761D127DFCFC70078F1D0 /* LibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13761D027DFCFC70078F1D0 /* LibraryViewModel.swift */; };
 		D187883727DA744C005399D4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D187883927DA744C005399D4 /* Localizable.strings */; };
 		D187883C27DA8A5F005399D4 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D187883B27DA8A5F005399D4 /* TabBarController.swift */; };
 		D1DC758A2799E69B002BB45E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DC75892799E69B002BB45E /* AppDelegate.swift */; };
@@ -60,7 +60,7 @@
 		D1150D6527D0F42600BF7A5C /* LibraryViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryViewCell.xib; sourceTree = "<group>"; };
 		D1222919279B02C80086313A /* ConfigurationFiles */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ConfigurationFiles; sourceTree = SOURCE_ROOT; };
 		D13761CC27DFC5630078F1D0 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
-		D13761D027DFCFC70078F1D0 /* BookCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCellViewModel.swift; sourceTree = "<group>"; };
+		D13761D027DFCFC70078F1D0 /* LibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
 		D187883827DA744C005399D4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D187883A27DA7533005399D4 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D187883B27DA8A5F005399D4 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 			children = (
 				D1150D6427D0F42600BF7A5C /* LibraryViewCell.swift */,
 				D1150D6527D0F42600BF7A5C /* LibraryViewCell.xib */,
-				D13761D027DFCFC70078F1D0 /* BookCellViewModel.swift */,
+				D13761D027DFCFC70078F1D0 /* LibraryViewModel.swift */,
 			);
 			path = BookCell;
 			sourceTree = "<group>";
@@ -230,6 +230,7 @@
 				D1DC75832799E69B002BB45E /* Frameworks */,
 				D1DC75842799E69B002BB45E /* Resources */,
 				D32E9228794A9D6336775739 /* [CP] Embed Pods Frameworks */,
+				D13761D227E0D3470078F1D0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -437,6 +438,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D13761D227E0D3470078F1D0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 		D32E9228794A9D6336775739 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -462,7 +480,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1DC758E2799E69B002BB45E /* LoginViewController.swift in Sources */,
-				D13761D127DFCFC70078F1D0 /* BookCellViewModel.swift in Sources */,
+				D13761D127DFCFC70078F1D0 /* LibraryViewModel.swift in Sources */,
 				D1DC758A2799E69B002BB45E /* AppDelegate.swift in Sources */,
 				D13761CD27DFC5630078F1D0 /* Book.swift in Sources */,
 				D1150D6327CFEE9700BF7A5C /* LibraryViewController.swift in Sources */,
