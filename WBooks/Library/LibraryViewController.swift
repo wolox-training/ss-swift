@@ -10,37 +10,15 @@ import WolmoCore
 
 class LibraryViewController: UITableViewController {
     private let cellIdentifier = "LibraryViewCell"
-    
-    var titles = ["A Little Bird Told Me",
-                  "When the Doves Disappeared",
-                  "The Best Book in the World",
-                  "Be Creative",
-                  "This is also UX",
-                  "A Little Bird Told Me",
-                  "When the Doves Disappeared",
-                  "The Best Book in the World",
-                  "Be Creative",
-                  "This is also UX"]
-    
-    var authors = ["Timothy Cross",
-                   "Sofi Oksanen",
-                   "Peter Sjernstrom",
-                   "Tony Alcazar",
-                   "Liliana Castilla",
-                   "Timothy Cross",
-                   "Sofi Oksanen",
-                   "Peter Sjernstrom",
-                   "Tony Alcazar",
-                   "Liliana Castilla"]
-    
+    private let viewModel = LibraryViewModel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.register(UINib(nibName: cellIdentifier, bundle: nil), forCellReuseIdentifier: cellIdentifier)
         tableView.backgroundColor = UIColor(hex: "#EAF6FA")
         setUpNavBar()
     }
-    
+
     private func setUpNavBar() {
         let title = UILabel()
         title.font = UIFont.boldSystemFont(ofSize: 17)
@@ -48,7 +26,8 @@ class LibraryViewController: UITableViewController {
         title.text = "LIBRARY_VIEW_TITLE".localized()
         title.backgroundColor = .clear
         navigationItem.titleView = title
-        let notifications = UIBarButtonItem(image: UIImage(named: "ic_notifications"), style: .plain, target: self, action: nil)
+        let notifications = UIBarButtonItem(image: UIImage(named: "ic_notifications"),
+                                            style: .plain, target: self, action: nil)
         let search = UIBarButtonItem(image: UIImage(named: "ic_search"), style: .plain, target: self, action: nil)
         setNavigationLeftButtons([notifications])
         setNavigationRightButtons([search])
@@ -57,7 +36,6 @@ class LibraryViewController: UITableViewController {
         navbarAppearance.backgroundColor = UIColor(hex: "#00ADEE")
 
         navigationController?.navigationBar.isTranslucent = false
-        
         navigationController?.navigationBar.standardAppearance = navbarAppearance
         navigationController?.navigationBar.scrollEdgeAppearance = navbarAppearance
     }
@@ -68,10 +46,12 @@ class LibraryViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! LibraryViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+                as? LibraryViewCell else { return UITableViewCell() }
         cell.separatorInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: UIScreen.main.bounds.width)
-        cell.bookTitle.text = titles[indexPath.row]
-        cell.bookAuthor.text = authors[indexPath.row]
+        let book = viewModel.getBooksByIndex(index: indexPath.row)
+        cell.bookTitle.text = book.title
+        cell.bookAuthor.text = book.author
         cell.bookCover.image = UIImage(named: "img_book\(String(indexPath.row+1)).png")
         return cell
     }

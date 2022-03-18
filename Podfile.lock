@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (5.5.0)
+  - SwiftLint (0.46.5)
   - WolmoCore (6.3.0)
 
 DEPENDENCIES:
   - Alamofire
+  - SwiftLint
   - WolmoCore
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - SwiftLint
     - WolmoCore
 
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  SwiftLint: 2c16e8fa99dac2e440dc0c70ea74d2532048f6cf
   WolmoCore: 4fd7643bc03d1e47316bba77eb157d2904003415
 
-PODFILE CHECKSUM: 0e9402e8cbc8d710a9c77127fae0dde05735d0bf
+PODFILE CHECKSUM: d30082ba2fa700bf93039db97dcfa96065b28439
 
 COCOAPODS: 1.11.2
