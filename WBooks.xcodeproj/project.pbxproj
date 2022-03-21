@@ -13,15 +13,17 @@
 		D1150D6327CFEE9700BF7A5C /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1150D6227CFEE9700BF7A5C /* LibraryViewController.swift */; };
 		D1150D6627D0F42600BF7A5C /* LibraryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1150D6427D0F42600BF7A5C /* LibraryViewCell.swift */; };
 		D1150D6727D0F42600BF7A5C /* LibraryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1150D6527D0F42600BF7A5C /* LibraryViewCell.xib */; };
-		D122291A279B02C90086313A /* ConfigurationFiles in Resources */ = {isa = PBXBuildFile; fileRef = D1222919279B02C80086313A /* ConfigurationFiles */; };
 		D13761CD27DFC5630078F1D0 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13761CC27DFC5630078F1D0 /* Book.swift */; };
 		D13761D127DFCFC70078F1D0 /* LibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13761D027DFCFC70078F1D0 /* LibraryViewModel.swift */; };
+		D13E89DD27E8EF75006995D9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13E89DC27E8EF75006995D9 /* LoginView.swift */; };
+		D13E89DF27E8EF8E006995D9 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D13E89DE27E8EF8E006995D9 /* LoginView.xib */; };
 		D187883727DA744C005399D4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D187883927DA744C005399D4 /* Localizable.strings */; };
 		D187883C27DA8A5F005399D4 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D187883B27DA8A5F005399D4 /* TabBarController.swift */; };
+		D1CCAF7327E4F47500360B12 /* LibraryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1CCAF7227E4F47500360B12 /* LibraryView.xib */; };
+		D1CCAF7527E4F83A00360B12 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CCAF7427E4F83A00360B12 /* LibraryView.swift */; };
 		D1DC758A2799E69B002BB45E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DC75892799E69B002BB45E /* AppDelegate.swift */; };
 		D1DC758C2799E69B002BB45E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DC758B2799E69B002BB45E /* SceneDelegate.swift */; };
 		D1DC758E2799E69B002BB45E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DC758D2799E69B002BB45E /* LoginViewController.swift */; };
-		D1DC75912799E69B002BB45E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1DC758F2799E69B002BB45E /* Main.storyboard */; };
 		D1DC75932799E6A3002BB45E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1DC75922799E6A3002BB45E /* Assets.xcassets */; };
 		D1DC75962799E6A3002BB45E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1DC75942799E6A3002BB45E /* LaunchScreen.storyboard */; };
 		D1DC75A12799E6A4002BB45E /* WBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DC75A02799E6A4002BB45E /* WBooksTests.swift */; };
@@ -58,18 +60,19 @@
 		D1150D6227CFEE9700BF7A5C /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		D1150D6427D0F42600BF7A5C /* LibraryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewCell.swift; sourceTree = "<group>"; };
 		D1150D6527D0F42600BF7A5C /* LibraryViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryViewCell.xib; sourceTree = "<group>"; };
-		D1222919279B02C80086313A /* ConfigurationFiles */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ConfigurationFiles; sourceTree = SOURCE_ROOT; };
 		D13761CC27DFC5630078F1D0 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		D13761D027DFCFC70078F1D0 /* LibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
+		D13E89DC27E8EF75006995D9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		D13E89DE27E8EF8E006995D9 /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		D187883827DA744C005399D4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D187883A27DA7533005399D4 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D187883B27DA8A5F005399D4 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		D18D8B38279B37AA004237FB /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Config.xcconfig; path = ConfigurationFiles/Config.xcconfig; sourceTree = "<group>"; };
+		D1CCAF7227E4F47500360B12 /* LibraryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryView.xib; sourceTree = "<group>"; };
+		D1CCAF7427E4F83A00360B12 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		D1DC75862799E69B002BB45E /* WBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1DC75892799E69B002BB45E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1DC758B2799E69B002BB45E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D1DC758D2799E69B002BB45E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		D1DC75902799E69B002BB45E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D1DC75922799E6A3002BB45E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1DC75952799E6A3002BB45E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1DC75972799E6A3002BB45E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -134,6 +137,8 @@
 			isa = PBXGroup;
 			children = (
 				D1150D6227CFEE9700BF7A5C /* LibraryViewController.swift */,
+				D1CCAF7227E4F47500360B12 /* LibraryView.xib */,
+				D1CCAF7427E4F83A00360B12 /* LibraryView.swift */,
 				D13761CF27DFC7FF0078F1D0 /* BookCell */,
 			);
 			path = Library;
@@ -149,15 +154,23 @@
 			path = BookCell;
 			sourceTree = "<group>";
 		};
+		D1CCAF7627E4FA9000360B12 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D1DC758D2799E69B002BB45E /* LoginViewController.swift */,
+				D13E89DC27E8EF75006995D9 /* LoginView.swift */,
+				D13E89DE27E8EF8E006995D9 /* LoginView.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		D1DC757D2799E69B002BB45E = {
 			isa = PBXGroup;
 			children = (
-				D18D8B38279B37AA004237FB /* Config.xcconfig */,
 				D1DC75882799E69B002BB45E /* WBooks */,
 				D1DC759F2799E6A4002BB45E /* WBooksTests */,
 				D1DC75A92799E6A4002BB45E /* WBooksUITests */,
 				D1DC75872799E69B002BB45E /* Products */,
-				D1222919279B02C80086313A /* ConfigurationFiles */,
 				B737C074F3C1B4CDE1F587E5 /* Pods */,
 				F73B828AEF91DCA468E469C4 /* Frameworks */,
 			);
@@ -176,12 +189,11 @@
 		D1DC75882799E69B002BB45E /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				D1CCAF7627E4FA9000360B12 /* Login */,
 				D13761CE27DFC7F20078F1D0 /* Library */,
 				D13761CB27DFC5480078F1D0 /* Models */,
 				D1DC75892799E69B002BB45E /* AppDelegate.swift */,
 				D1DC758B2799E69B002BB45E /* SceneDelegate.swift */,
-				D1DC758D2799E69B002BB45E /* LoginViewController.swift */,
-				D1DC758F2799E69B002BB45E /* Main.storyboard */,
 				D1DC75922799E6A3002BB45E /* Assets.xcassets */,
 				D1DC75942799E6A3002BB45E /* LaunchScreen.storyboard */,
 				D1DC75972799E6A3002BB45E /* Info.plist */,
@@ -329,12 +341,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1CCAF7327E4F47500360B12 /* LibraryView.xib in Resources */,
 				D1150D6727D0F42600BF7A5C /* LibraryViewCell.xib in Resources */,
 				D187883727DA744C005399D4 /* Localizable.strings in Resources */,
+				D13E89DF27E8EF8E006995D9 /* LoginView.xib in Resources */,
 				D1DC75962799E6A3002BB45E /* LaunchScreen.storyboard in Resources */,
-				D122291A279B02C90086313A /* ConfigurationFiles in Resources */,
 				D1DC75932799E6A3002BB45E /* Assets.xcassets in Resources */,
-				D1DC75912799E69B002BB45E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,9 +495,11 @@
 				D13761D127DFCFC70078F1D0 /* LibraryViewModel.swift in Sources */,
 				D1DC758A2799E69B002BB45E /* AppDelegate.swift in Sources */,
 				D13761CD27DFC5630078F1D0 /* Book.swift in Sources */,
+				D1CCAF7527E4F83A00360B12 /* LibraryView.swift in Sources */,
 				D1150D6327CFEE9700BF7A5C /* LibraryViewController.swift in Sources */,
 				D187883C27DA8A5F005399D4 /* TabBarController.swift in Sources */,
 				D1DC758C2799E69B002BB45E /* SceneDelegate.swift in Sources */,
+				D13E89DD27E8EF75006995D9 /* LoginView.swift in Sources */,
 				D1150D6627D0F42600BF7A5C /* LibraryViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -532,14 +546,6 @@
 			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
-		D1DC758F2799E69B002BB45E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D1DC75902799E69B002BB45E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D1DC75942799E6A3002BB45E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -553,7 +559,6 @@
 /* Begin XCBuildConfiguration section */
 		D1DC75AE2799E6A4002BB45E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D18D8B38279B37AA004237FB /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -616,7 +621,6 @@
 		};
 		D1DC75AF2799E6A4002BB45E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D18D8B38279B37AA004237FB /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -682,10 +686,9 @@
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WBooks/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "$(APP_NAME)";
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -712,10 +715,9 @@
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WBooks/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "$(APP_NAME)";
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -8,14 +8,23 @@
 import UIKit
 import WolmoCore
 
-class LibraryViewController: UITableViewController {
+class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     private let cellIdentifier = "LibraryViewCell"
     private let viewModel = LibraryViewModel()
+    private let libraryView = LibraryView()
+    override func loadView() {
+        view = libraryView
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UINib(nibName: cellIdentifier, bundle: nil), forCellReuseIdentifier: cellIdentifier)
-        tableView.backgroundColor = UIColor(hex: "#EAF6FA")
+        guard let table = libraryView.tableView else { return }
+        table.register(
+            UINib(nibName: cellIdentifier, bundle: nil),
+            forCellReuseIdentifier: cellIdentifier)
+        table.backgroundColor = UIColor(hex: "#EAF6FA")
+        table.delegate = self
+        table.dataSource = self
         setUpNavBar()
     }
 
@@ -41,11 +50,11 @@ class LibraryViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
                 as? LibraryViewCell else { return UITableViewCell() }
         cell.separatorInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: UIScreen.main.bounds.width)
