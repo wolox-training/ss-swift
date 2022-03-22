@@ -9,6 +9,7 @@ import UIKit
 
 class LibraryViewModel {
     private var _book: [Book] = []
+    private var repository = BookRepository()
 
     private var titles = ["A Little Bird Told Me",
                   "When the Doves Disappeared",
@@ -34,5 +35,11 @@ class LibraryViewModel {
     func getBooksByIndex(index: Int) -> Book {
         let book = Book(author: authors[index], title: titles[index], imageUrl: nil)
         return book
+    }
+    
+    func getBooks() {
+        let onSuccess = { books in print(books) }
+        let onError = {error in print(error) }
+        repository.fetchBooks(onSuccess: onSuccess, onError: onError)
     }
 }

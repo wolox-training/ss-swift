@@ -29,6 +29,7 @@
 		D1DC75A12799E6A4002BB45E /* WBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DC75A02799E6A4002BB45E /* WBooksTests.swift */; };
 		D1DC75AB2799E6A4002BB45E /* WBooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DC75AA2799E6A4002BB45E /* WBooksUITests.swift */; };
 		D1DC75AD2799E6A4002BB45E /* WBooksUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DC75AC2799E6A4002BB45E /* WBooksUITestsLaunchTests.swift */; };
+		D1F454DC27E9FD6C00EDD6CC /* BookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F454DB27E9FD6C00EDD6CC /* BookRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		D1DC75A62799E6A4002BB45E /* WBooksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WBooksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1DC75AA2799E6A4002BB45E /* WBooksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksUITests.swift; sourceTree = "<group>"; };
 		D1DC75AC2799E6A4002BB45E /* WBooksUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D1F454DB27E9FD6C00EDD6CC /* BookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRepository.swift; sourceTree = "<group>"; };
 		D9CED803FF2189668337C586 /* Pods-WBooksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooksTests.debug.xcconfig"; path = "Target Support Files/Pods-WBooksTests/Pods-WBooksTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -189,6 +191,7 @@
 		D1DC75882799E69B002BB45E /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				D1F454DA27E9FD4600EDD6CC /* BookRepository */,
 				D1CCAF7627E4FA9000360B12 /* Login */,
 				D13761CE27DFC7F20078F1D0 /* Library */,
 				D13761CB27DFC5480078F1D0 /* Models */,
@@ -218,6 +221,14 @@
 				D1DC75AC2799E6A4002BB45E /* WBooksUITestsLaunchTests.swift */,
 			);
 			path = WBooksUITests;
+			sourceTree = "<group>";
+		};
+		D1F454DA27E9FD4600EDD6CC /* BookRepository */ = {
+			isa = PBXGroup;
+			children = (
+				D1F454DB27E9FD6C00EDD6CC /* BookRepository.swift */,
+			);
+			path = BookRepository;
 			sourceTree = "<group>";
 		};
 		F73B828AEF91DCA468E469C4 /* Frameworks */ = {
@@ -500,6 +511,7 @@
 				D187883C27DA8A5F005399D4 /* TabBarController.swift in Sources */,
 				D1DC758C2799E69B002BB45E /* SceneDelegate.swift in Sources */,
 				D13E89DD27E8EF75006995D9 /* LoginView.swift in Sources */,
+				D1F454DC27E9FD6C00EDD6CC /* BookRepository.swift in Sources */,
 				D1150D6627D0F42600BF7A5C /* LibraryViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
