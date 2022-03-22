@@ -13,7 +13,6 @@
 		D1150D6327CFEE9700BF7A5C /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1150D6227CFEE9700BF7A5C /* LibraryViewController.swift */; };
 		D1150D6627D0F42600BF7A5C /* LibraryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1150D6427D0F42600BF7A5C /* LibraryViewCell.swift */; };
 		D1150D6727D0F42600BF7A5C /* LibraryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1150D6527D0F42600BF7A5C /* LibraryViewCell.xib */; };
-		D122291A279B02C90086313A /* ConfigurationFiles in Resources */ = {isa = PBXBuildFile; fileRef = D1222919279B02C80086313A /* ConfigurationFiles */; };
 		D13761CD27DFC5630078F1D0 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13761CC27DFC5630078F1D0 /* Book.swift */; };
 		D13761D127DFCFC70078F1D0 /* LibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13761D027DFCFC70078F1D0 /* LibraryViewModel.swift */; };
 		D187883727DA744C005399D4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D187883927DA744C005399D4 /* Localizable.strings */; };
@@ -58,13 +57,11 @@
 		D1150D6227CFEE9700BF7A5C /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		D1150D6427D0F42600BF7A5C /* LibraryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewCell.swift; sourceTree = "<group>"; };
 		D1150D6527D0F42600BF7A5C /* LibraryViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryViewCell.xib; sourceTree = "<group>"; };
-		D1222919279B02C80086313A /* ConfigurationFiles */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ConfigurationFiles; sourceTree = SOURCE_ROOT; };
 		D13761CC27DFC5630078F1D0 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		D13761D027DFCFC70078F1D0 /* LibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
 		D187883827DA744C005399D4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D187883A27DA7533005399D4 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D187883B27DA8A5F005399D4 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		D18D8B38279B37AA004237FB /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Config.xcconfig; path = ConfigurationFiles/Config.xcconfig; sourceTree = "<group>"; };
 		D1DC75862799E69B002BB45E /* WBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1DC75892799E69B002BB45E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1DC758B2799E69B002BB45E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -152,12 +149,10 @@
 		D1DC757D2799E69B002BB45E = {
 			isa = PBXGroup;
 			children = (
-				D18D8B38279B37AA004237FB /* Config.xcconfig */,
 				D1DC75882799E69B002BB45E /* WBooks */,
 				D1DC759F2799E6A4002BB45E /* WBooksTests */,
 				D1DC75A92799E6A4002BB45E /* WBooksUITests */,
 				D1DC75872799E69B002BB45E /* Products */,
-				D1222919279B02C80086313A /* ConfigurationFiles */,
 				B737C074F3C1B4CDE1F587E5 /* Pods */,
 				F73B828AEF91DCA468E469C4 /* Frameworks */,
 			);
@@ -332,7 +327,6 @@
 				D1150D6727D0F42600BF7A5C /* LibraryViewCell.xib in Resources */,
 				D187883727DA744C005399D4 /* Localizable.strings in Resources */,
 				D1DC75962799E6A3002BB45E /* LaunchScreen.storyboard in Resources */,
-				D122291A279B02C90086313A /* ConfigurationFiles in Resources */,
 				D1DC75932799E6A3002BB45E /* Assets.xcassets in Resources */,
 				D1DC75912799E69B002BB45E /* Main.storyboard in Resources */,
 			);
@@ -553,7 +547,6 @@
 /* Begin XCBuildConfiguration section */
 		D1DC75AE2799E6A4002BB45E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D18D8B38279B37AA004237FB /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -616,7 +609,6 @@
 		};
 		D1DC75AF2799E6A4002BB45E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D18D8B38279B37AA004237FB /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
