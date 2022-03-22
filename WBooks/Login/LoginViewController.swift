@@ -6,12 +6,21 @@
 //
 
 import UIKit
+import WolmoCore
 
 class LoginViewController: UIViewController {
+    private let loginView = LoginView()
+
+    override func loadView() {
+        view = loginView
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        loginView.onLogIn = logInButton
     }
-    @IBAction func logInButton(_ sender: UIButton) {
+
+    func logInButton() {
         let tabBar = TabBarController()
         tabBar.modalPresentationStyle = .fullScreen
         present(tabBar, animated: true)

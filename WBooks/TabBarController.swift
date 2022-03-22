@@ -34,7 +34,7 @@ class TabBarController: UITabBarController {
         viewControllers = [library, wishlist, suggest, myRentals]
     }
     private func setUpTabBarItem(navigation: String, title: String, image: String, tag: Int,
-                                 controller: UITableViewController) -> UINavigationController {
+                                 controller: UIViewController) -> UINavigationController {
         let navigation = UINavigationController(rootViewController: controller)
         navigation.tabBarItem = UITabBarItem()
         navigation.tabBarItem.title = title.localized()
