@@ -5,10 +5,10 @@
 //  Created by sebastian.a.spadea on 14/03/2022.
 //
 
-import UIKit
+import Foundation
 
 class LibraryViewModel {
-    private var _book: [Book] = []
+    var books: [Book] = []
     private var repository = BookRepository()
 
     private var titles = ["A Little Bird Told Me",
@@ -33,13 +33,16 @@ class LibraryViewModel {
                    "Liliana Castilla"]
 
     func getBooksByIndex(index: Int) -> Book {
-        let book = Book(author: authors[index], title: titles[index], imageUrl: nil)
+        let book = Book(author: authors[index], title: titles[index], image: "", genre: "", year: "", id: 0)
         return book
     }
     
-    func getBooks() {
-        let onSuccess = { books in print(books) }
-        let onError = {error in print(error) }
+    func getBooks(action: @escaping () -> ()) {
+        let onSuccess = { (books: [Book]) in
+            self.books = books
+            action()
+        }
+        let onError = { error in print(error) }
         repository.fetchBooks(onSuccess: onSuccess, onError: onError)
     }
 }

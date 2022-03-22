@@ -26,6 +26,9 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
         table.delegate = self
         table.dataSource = self
         setUpNavBar()
+        viewModel.getBooks() { [weak self] in
+            print(self?.viewModel.books)
+        }
     }
 
     private func setUpNavBar() {

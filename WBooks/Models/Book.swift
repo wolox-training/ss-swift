@@ -13,20 +13,13 @@ public struct Book: Codable {
     let title: String
     let genre: String
     let year: String
-    let imageUrl: URL?
-    init(author: String, title: String, imageUrl: URL?) {
+    let image: String
+    init(author: String, title: String, image: String, genre: String, year: String, id: Int) {
         self.author = author
         self.title = title
-        self.imageUrl = imageUrl
-    }
-    
-    public init(from: Decoder){
-        let container = try! from.container(keyedBy: BookKey.self)
-        id = try! container.decode(Int.self, forKey: .id)
-        title = try! container.decode(String.self, forKey: .title)
-        author = try! container.decode(String.self, forKey: .author)
-        genre = try! container.decode(String.self, forKey: .genre)
-        year = try! container.decode(String.self, forKey: .year)
-        imageUrl = try! container.decode(String.self, forKey: .image)
+        self.image = image
+        self.genre = genre
+        self.year = year
+        self.id = id
     }
 }
