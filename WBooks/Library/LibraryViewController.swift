@@ -8,7 +8,7 @@
 import UIKit
 import WolmoCore
 
-class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class LibraryViewController: UIViewController {
     private let cellIdentifier = "LibraryViewCell"
     private let viewModel = LibraryViewModel()
     private let libraryView = LibraryView()
@@ -51,7 +51,9 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
         navigationController?.navigationBar.standardAppearance = navbarAppearance
         navigationController?.navigationBar.scrollEdgeAppearance = navbarAppearance
     }
+}
 
+extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
     // MARK: - Table view data source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
