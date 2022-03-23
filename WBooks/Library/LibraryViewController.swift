@@ -26,8 +26,12 @@ class LibraryViewController: UIViewController {
         table.delegate = self
         table.dataSource = self
         setUpNavBar()
-        viewModel.getBooks() { [weak self] in
-            print(self?.viewModel.books)
+        loadBooks()
+    }
+    
+    private func loadBooks() {
+        viewModel.getBooks { [weak self] in
+            self?.libraryView.tableView.reloadData()
         }
     }
 
@@ -56,17 +60,17 @@ class LibraryViewController: UIViewController {
 extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
     // MARK: - Table view data source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.viewModel.books.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
                 as? LibraryViewCell else { return UITableViewCell() }
         cell.separatorInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: UIScreen.main.bounds.width)
-        let book = viewModel.getBooksByIndex(index: indexPath.row)
+        let book = viewModel.books[indexPath.row]
         cell.bookTitle.text = book.title
         cell.bookAuthor.text = book.author
-        cell.bookCover.image = UIImage(named: "img_book\(String(indexPath.row+1)).png")
+        cell.bookCover.image = UIImage(named: "img_book5")
         return cell
     }
 }

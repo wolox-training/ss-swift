@@ -8,38 +8,19 @@
 import Foundation
 
 class LibraryViewModel {
-    var books: [Book] = []
+    private(set) var books: [Book] = []
     private var repository = BookRepository()
-
-    private var titles = ["A Little Bird Told Me",
-                  "When the Doves Disappeared",
-                  "The Best Book in the World",
-                  "Be Creative",
-                  "This is also UX",
-                  "A Little Bird Told Me",
-                  "When the Doves Disappeared",
-                  "The Best Book in the World",
-                  "Be Creative",
-                  "This is also UX"]
-    private var authors = ["Timothy Cross",
-                   "Sofi Oksanen",
-                   "Peter Sjernstrom",
-                   "Tony Alcazar",
-                   "Liliana Castilla",
-                   "Timothy Cross",
-                   "Sofi Oksanen",
-                   "Peter Sjernstrom",
-                   "Tony Alcazar",
-                   "Liliana Castilla"]
-
-    func getBooksByIndex(index: Int) -> Book {
-        let book = Book(author: authors[index], title: titles[index], image: "", genre: "", year: "", id: 0)
-        return book
-    }
     
-    func getBooks(action: @escaping () -> ()) {
+    func getBooks(action: @escaping () -> Void) {
         let onSuccess = { (books: [Book]) in
             self.books = books
+            self.books.removeAll(where: { book in
+                let title = book.title
+                return title.count < 10 ||
+                title.lowercased().contains("prueba") ||
+                title.lowercased().contains("asd") ||
+                title.lowercased().contains("ksd")
+            })
             action()
         }
         let onError = { error in print(error) }
