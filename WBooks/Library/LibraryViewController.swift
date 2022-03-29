@@ -22,7 +22,7 @@ class LibraryViewController: UIViewController {
         table.register(
             UINib(nibName: cellIdentifier, bundle: nil),
             forCellReuseIdentifier: cellIdentifier)
-        table.backgroundColor = UIColor(hex: "#EAF6FA")
+        table.backgroundColor = .backgroundGray
         table.delegate = self
         table.dataSource = self
         setUpNavBar()
@@ -49,7 +49,7 @@ class LibraryViewController: UIViewController {
         setNavigationRightButtons([search])
 
         let navbarAppearance = UINavigationBarAppearance()
-        navbarAppearance.backgroundColor = UIColor(hex: "#00ADEE")
+        navbarAppearance.backgroundColor = .backgroundNavBar
 
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.standardAppearance = navbarAppearance

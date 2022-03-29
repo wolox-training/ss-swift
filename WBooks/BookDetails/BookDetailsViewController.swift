@@ -43,7 +43,7 @@ class BookDetailsViewController: UIViewController {
         navigationItem.titleView = title
 
         let navbarAppearance = UINavigationBarAppearance()
-        navbarAppearance.backgroundColor = UIColor(hex: "#00ADEE")
+        navbarAppearance.backgroundColor = .backgroundNavBar
 
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.standardAppearance = navbarAppearance
@@ -59,11 +59,8 @@ class BookDetailsViewController: UIViewController {
         bookDetailsView.genreLabel.text = book.genre
         bookDetailsView.bookCoverImage.image = UIImage(named: "img_book5")
        
-        if book.status == "Available" {
-            bookDetailsView.statusLabel.textColor = UIColor(hex: "#A5CD39")
-        } else {
-            bookDetailsView.statusLabel.textColor = UIColor(hex: "#D0021B")
-        }
+        bookDetailsView.statusLabel.textColor = book.status == "Available" ?
+        UIColor(hex: "#A5CD39"):UIColor(hex: "#D0021B")
     }
     
     private func rentBook() {
@@ -83,7 +80,7 @@ class BookDetailsViewController: UIViewController {
     
     func showAlertBookUnavailble(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        alert.addAction(UIAlertAction(title: "OK".localized(), style: UIAlertAction.Style.default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
 }

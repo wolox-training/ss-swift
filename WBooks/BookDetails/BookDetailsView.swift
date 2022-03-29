@@ -24,7 +24,7 @@ class BookDetailsView: NibView {
     }
     @IBOutlet var view: UIView! {
         didSet {
-            view.backgroundColor = UIColor(hex: "#EAF6FA")
+            view.backgroundColor = .backgroundGray
         }
     }
     @IBOutlet weak var wishlistButton: UIButton! {

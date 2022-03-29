@@ -23,6 +23,7 @@
 		D13E89DF27E8EF8E006995D9 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D13E89DE27E8EF8E006995D9 /* LoginView.xib */; };
 		D187883727DA744C005399D4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D187883927DA744C005399D4 /* Localizable.strings */; };
 		D187883C27DA8A5F005399D4 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D187883B27DA8A5F005399D4 /* TabBarController.swift */; };
+		D19C957727F38FE000064F91 /* ColorsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C957627F38FE000064F91 /* ColorsConstants.swift */; };
 		D1CCAF7327E4F47500360B12 /* LibraryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1CCAF7227E4F47500360B12 /* LibraryView.xib */; };
 		D1CCAF7527E4F83A00360B12 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CCAF7427E4F83A00360B12 /* LibraryView.swift */; };
 		D1CF93D627F204E4009E3F84 /* RentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CF93D527F204E4009E3F84 /* RentRepository.swift */; };
@@ -79,6 +80,7 @@
 		D187883827DA744C005399D4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D187883A27DA7533005399D4 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D187883B27DA8A5F005399D4 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		D19C957627F38FE000064F91 /* ColorsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsConstants.swift; sourceTree = "<group>"; };
 		D1CCAF7227E4F47500360B12 /* LibraryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryView.xib; sourceTree = "<group>"; };
 		D1CCAF7427E4F83A00360B12 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		D1CF93D527F204E4009E3F84 /* RentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentRepository.swift; sourceTree = "<group>"; };
@@ -183,6 +185,14 @@
 			path = BookCell;
 			sourceTree = "<group>";
 		};
+		D19C957527F38FC300064F91 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				D19C957627F38FE000064F91 /* ColorsConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		D1CCAF7627E4FA9000360B12 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +228,7 @@
 		D1DC75882799E69B002BB45E /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				D19C957527F38FC300064F91 /* Constants */,
 				D12DDD7C27EBAACB00E58C77 /* BookDetails */,
 				D1F454DA27E9FD4600EDD6CC /* BookRepository */,
 				D1CCAF7627E4FA9000360B12 /* Login */,
@@ -549,6 +560,7 @@
 				D1CF93D627F204E4009E3F84 /* RentRepository.swift in Sources */,
 				D1CF93D827F2262A009E3F84 /* Rent.swift in Sources */,
 				D1150D6627D0F42600BF7A5C /* LibraryViewCell.swift in Sources */,
+				D19C957727F38FE000064F91 /* ColorsConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
