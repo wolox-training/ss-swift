@@ -13,8 +13,10 @@ public struct Comment: Decodable {
     let bookID: Int
     let content: String
     
-    private enum CodingKeys : String, CodingKey {
+    private enum CodingKeys: String, CodingKey {
         case userID = "user_id"
         case bookID = "book_id"
+        case id
+        case content
     }
 }
