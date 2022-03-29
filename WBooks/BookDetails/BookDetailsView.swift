@@ -42,4 +42,7 @@ class BookDetailsView: NibView {
     @IBAction func rentButton(_ sender: UIButton) {
         onRentButton?()
     }
+    
+    @IBOutlet weak var commentsTableView: UITableView!
+    
 }

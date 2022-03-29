@@ -23,6 +23,8 @@
 		D13E89DF27E8EF8E006995D9 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D13E89DE27E8EF8E006995D9 /* LoginView.xib */; };
 		D187883727DA744C005399D4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D187883927DA744C005399D4 /* Localizable.strings */; };
 		D187883C27DA8A5F005399D4 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D187883B27DA8A5F005399D4 /* TabBarController.swift */; };
+		D19C956F27F37BC900064F91 /* BookCommentsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C956D27F37BC900064F91 /* BookCommentsCell.swift */; };
+		D19C957027F37BC900064F91 /* BookCommentsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D19C956E27F37BC900064F91 /* BookCommentsCell.xib */; };
 		D1CCAF7327E4F47500360B12 /* LibraryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1CCAF7227E4F47500360B12 /* LibraryView.xib */; };
 		D1CCAF7527E4F83A00360B12 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CCAF7427E4F83A00360B12 /* LibraryView.swift */; };
 		D1CF93D627F204E4009E3F84 /* RentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CF93D527F204E4009E3F84 /* RentRepository.swift */; };
@@ -79,6 +81,8 @@
 		D187883827DA744C005399D4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D187883A27DA7533005399D4 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D187883B27DA8A5F005399D4 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		D19C956D27F37BC900064F91 /* BookCommentsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCommentsCell.swift; sourceTree = "<group>"; };
+		D19C956E27F37BC900064F91 /* BookCommentsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCommentsCell.xib; sourceTree = "<group>"; };
 		D1CCAF7227E4F47500360B12 /* LibraryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryView.xib; sourceTree = "<group>"; };
 		D1CCAF7427E4F83A00360B12 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		D1CF93D527F204E4009E3F84 /* RentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentRepository.swift; sourceTree = "<group>"; };
@@ -144,6 +148,7 @@
 		D12DDD7C27EBAACB00E58C77 /* BookDetails */ = {
 			isa = PBXGroup;
 			children = (
+				D19C956C27F37B6700064F91 /* BookCommentsCell */,
 				D12DDD7D27EBAAFC00E58C77 /* BookDetailsView.xib */,
 				D12DDD7F27EBAB0C00E58C77 /* BookDetailsView.swift */,
 				D118EFFF27EE3675000FF5D6 /* BookDetailsViewController.swift */,
@@ -181,6 +186,15 @@
 				D13761D027DFCFC70078F1D0 /* LibraryViewModel.swift */,
 			);
 			path = BookCell;
+			sourceTree = "<group>";
+		};
+		D19C956C27F37B6700064F91 /* BookCommentsCell */ = {
+			isa = PBXGroup;
+			children = (
+				D19C956D27F37BC900064F91 /* BookCommentsCell.swift */,
+				D19C956E27F37BC900064F91 /* BookCommentsCell.xib */,
+			);
+			path = BookCommentsCell;
 			sourceTree = "<group>";
 		};
 		D1CCAF7627E4FA9000360B12 /* Login */ = {
@@ -387,6 +401,7 @@
 				D13E89DF27E8EF8E006995D9 /* LoginView.xib in Resources */,
 				D1DC75962799E6A3002BB45E /* LaunchScreen.storyboard in Resources */,
 				D1DC75932799E6A3002BB45E /* Assets.xcassets in Resources */,
+				D19C957027F37BC900064F91 /* BookCommentsCell.xib in Resources */,
 				D12DDD7E27EBAAFC00E58C77 /* BookDetailsView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -544,6 +559,7 @@
 				D118F00227EE3692000FF5D6 /* BookDetailsViewModel.swift in Sources */,
 				D187883C27DA8A5F005399D4 /* TabBarController.swift in Sources */,
 				D1DC758C2799E69B002BB45E /* SceneDelegate.swift in Sources */,
+				D19C956F27F37BC900064F91 /* BookCommentsCell.swift in Sources */,
 				D13E89DD27E8EF75006995D9 /* LoginView.swift in Sources */,
 				D1F454DC27E9FD6C00EDD6CC /* BookRepository.swift in Sources */,
 				D1CF93D627F204E4009E3F84 /* RentRepository.swift in Sources */,
