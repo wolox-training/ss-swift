@@ -28,6 +28,7 @@ class BookDetailsViewController: UIViewController {
         setBookDetails()
         setUpNavBar()
         bookDetailsView.onRentButton = rentBook
+        loadComment()
     }
     
     override func loadView() {
@@ -78,6 +79,12 @@ class BookDetailsViewController: UIViewController {
         bookDetailsViewModel.rentBook { [weak self] in
             self?.bookDetailsView.statusLabel.text = "Unavailable".localized()
             self?.bookDetailsView.statusLabel.textColor = UIColor(hex: "#D0021B")
+        }
+    }
+    
+    private func loadComment() {
+        bookDetailsViewModel.getComments { [weak self] in
+            print(self?.bookDetailsViewModel.comments)
         }
     }
     
