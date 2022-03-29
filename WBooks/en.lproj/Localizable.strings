@@ -13,3 +13,13 @@
 "WISHLIST_TAB_BAR_BUTTON" = "Wishlist";
 "SUGGEST_TAB_BAR_BUTTON" = "Suggest";
 "RENTALS_TAB_BAR_BUTTON" = "Rentals";
+
+/* BOOK DETAILS VIEW */
+
+"BOOK_DETAILS_TITLE" = "BOOK DETAILS";
+"Available" = "Available";
+"Unavailable" = "Unavailable";
+"RENT" = "RENT";
+"REMOVE_WISHLIST" = "REMOVE WISHLIST";
+"ALERT_TITLE" = "Book unavailable";
+"ALERT_MESSAGE" = "Ooops! The book is not available☹️";

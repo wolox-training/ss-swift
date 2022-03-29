@@ -60,7 +60,7 @@ class LibraryViewController: UIViewController {
 extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
     // MARK: - Table view data source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.viewModel.books.count
+        return viewModel.books.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -72,5 +72,12 @@ extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
         cell.bookAuthor.text = book.author
         cell.bookCover.image = UIImage(named: "img_book5")
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let book = viewModel.books[indexPath.row]
+        let bookDetailsViewModel = BookDetailsViewModel(book: book)
+        let bookDetailsViewController = BookDetailsViewController(bookDetailsViewModel: bookDetailsViewModel)
+        navigationController?.pushViewController(bookDetailsViewController, animated: true)
     }
 }
