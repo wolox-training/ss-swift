@@ -10,6 +10,8 @@
 		0059D712A961BD68B049D13F /* Pods_WBooks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 166CEA8D481D54B6A0D90624 /* Pods_WBooks.framework */; };
 		09CE135FA75FB443A302CA80 /* Pods_WBooksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EC1D3294D64D1359D2C3D3 /* Pods_WBooksTests.framework */; };
 		3F8A41CD743A174F859CBC48 /* Pods_WBooks_WBooksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 657969001D610F5E1CE1C283 /* Pods_WBooks_WBooksUITests.framework */; };
+		D110BE2927F4963200EA28D9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D110BE2827F4963200EA28D9 /* User.swift */; };
+		D110BE2C27F496D200EA28D9 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D110BE2B27F496D200EA28D9 /* UserRepository.swift */; };
 		D1150D6327CFEE9700BF7A5C /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1150D6227CFEE9700BF7A5C /* LibraryViewController.swift */; };
 		D1150D6627D0F42600BF7A5C /* LibraryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1150D6427D0F42600BF7A5C /* LibraryViewCell.swift */; };
 		D1150D6727D0F42600BF7A5C /* LibraryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1150D6527D0F42600BF7A5C /* LibraryViewCell.xib */; };
@@ -69,6 +71,8 @@
 		58945B4CC189852C13151444 /* Pods-WBooks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooks.debug.xcconfig"; path = "Target Support Files/Pods-WBooks/Pods-WBooks.debug.xcconfig"; sourceTree = "<group>"; };
 		657969001D610F5E1CE1C283 /* Pods_WBooks_WBooksUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBooks_WBooksUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66EC1D3294D64D1359D2C3D3 /* Pods_WBooksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBooksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D110BE2827F4963200EA28D9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D110BE2B27F496D200EA28D9 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		D1150D6227CFEE9700BF7A5C /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		D1150D6427D0F42600BF7A5C /* LibraryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewCell.swift; sourceTree = "<group>"; };
 		D1150D6527D0F42600BF7A5C /* LibraryViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryViewCell.xib; sourceTree = "<group>"; };
@@ -149,6 +153,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		D110BE2A27F496BE00EA28D9 /* UserRepository */ = {
+			isa = PBXGroup;
+			children = (
+				D110BE2B27F496D200EA28D9 /* UserRepository.swift */,
+			);
+			path = UserRepository;
+			sourceTree = "<group>";
+		};
 		D12DDD7C27EBAACB00E58C77 /* BookDetails */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +180,7 @@
 				D1CF93D727F2262A009E3F84 /* Rent.swift */,
 				D1CF93D927F227D6009E3F84 /* RentResponse.swift */,
 				D19C957327F386C000064F91 /* Comment.swift */,
+				D110BE2827F4963200EA28D9 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -237,6 +250,7 @@
 		D1DC75882799E69B002BB45E /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				D110BE2A27F496BE00EA28D9 /* UserRepository */,
 				D12DDD7C27EBAACB00E58C77 /* BookDetails */,
 				D1F454DA27E9FD4600EDD6CC /* BookRepository */,
 				D1CCAF7627E4FA9000360B12 /* Login */,
@@ -553,6 +567,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D110BE2C27F496D200EA28D9 /* UserRepository.swift in Sources */,
 				D1DC758E2799E69B002BB45E /* LoginViewController.swift in Sources */,
 				D13761D127DFCFC70078F1D0 /* LibraryViewModel.swift in Sources */,
 				D19C957227F3867700064F91 /* CommentRepository.swift in Sources */,
@@ -573,6 +588,7 @@
 				D1CF93D627F204E4009E3F84 /* RentRepository.swift in Sources */,
 				D1CF93D827F2262A009E3F84 /* Rent.swift in Sources */,
 				D1150D6627D0F42600BF7A5C /* LibraryViewCell.swift in Sources */,
+				D110BE2927F4963200EA28D9 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
