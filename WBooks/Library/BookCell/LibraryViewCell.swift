@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import WolmoCore
 
 class LibraryViewCell: UITableViewCell {
     @IBOutlet weak var bookTitle: UILabel!
@@ -14,7 +15,7 @@ class LibraryViewCell: UITableViewCell {
     @IBOutlet weak var cellView: UIView! {
         didSet {
             cellView.backgroundColor = .white
-            cellView.layer.cornerRadius = 5
+            cellView.addShadow(radius: 1)
         }
     }
 

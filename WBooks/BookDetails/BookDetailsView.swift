@@ -19,7 +19,7 @@ class BookDetailsView: NibView {
     @IBOutlet weak var bookDetailsCard: UIView! {
         didSet {
             bookDetailsCard.backgroundColor = .white
-            bookDetailsCard.layer.cornerRadius = 5
+            bookDetailsCard.addShadow(radius: 1)
         }
     }
     @IBOutlet var view: UIView! {
@@ -43,6 +43,15 @@ class BookDetailsView: NibView {
         onRentButton?()
     }
     
-    @IBOutlet weak var commentsTableView: UITableView!
-    
+    @IBOutlet weak var commentsTableView: UITableView! {
+        didSet {
+            commentsTableView.backgroundColor = .white
+            commentsTableView.layer.masksToBounds = true
+        }
+    }
+    @IBOutlet weak var viewTable: UIView! {
+        didSet {
+            viewTable.addShadow(radius: 1)
+        }
+    }
 }

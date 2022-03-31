@@ -112,7 +112,7 @@ extension BookDetailsViewController: UITableViewDelegate, UITableViewDataSource 
                 as? BookCommentsCell else { return UITableViewCell() }
         let comment = bookDetailsViewModel.comments[indexPath.row]
         bookDetailsViewModel.getUser(id: comment.userID) { [weak self] in
-            cell.usernameLabel.text = 
+            cell.usernameLabel.text = self?.bookDetailsViewModel.user?.username
         }
         cell.userImage.image = UIImage(named: "img_user1")
         cell.commentLabel.text = comment.content

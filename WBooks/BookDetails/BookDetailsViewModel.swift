@@ -58,6 +58,6 @@ class BookDetailsViewModel {
             action()
         }
         let onError = { error in print(error) }
-        userRepository.fetchUsers(onSuccess: onSuccess, onError: onError, userID: user!.id)
+        userRepository.fetchUsers(onSuccess: onSuccess, onError: onError, userID: id)
     }
 }
