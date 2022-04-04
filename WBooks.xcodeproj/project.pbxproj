@@ -29,6 +29,14 @@
 		D19C957027F37BC900064F91 /* BookCommentsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D19C956E27F37BC900064F91 /* BookCommentsCell.xib */; };
 		D19C957227F3867700064F91 /* CommentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C957127F3867700064F91 /* CommentRepository.swift */; };
 		D19C957427F386C000064F91 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C957327F386C000064F91 /* Comment.swift */; };
+		D19F46C227F6335300C78465 /* BookDetailsCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19F46C127F6335300C78465 /* BookDetailsCardView.swift */; };
+		D19F46C427F6336600C78465 /* BookDetailsCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D19F46C327F6336600C78465 /* BookDetailsCardView.xib */; };
+		D19F46C627F633B900C78465 /* BookDetailsCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19F46C527F633B900C78465 /* BookDetailsCardViewController.swift */; };
+		D19F46C827F633DF00C78465 /* BookDetailsCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19F46C727F633DF00C78465 /* BookDetailsCardViewModel.swift */; };
+		D19F46CA27F648E300C78465 /* BookCommentsCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19F46C927F648E300C78465 /* BookCommentsCardView.swift */; };
+		D19F46CC27F648FA00C78465 /* BookCommentsCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D19F46CB27F648FA00C78465 /* BookCommentsCardView.xib */; };
+		D19F46CE27F6490E00C78465 /* BookCommentsCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19F46CD27F6490E00C78465 /* BookCommentsCardViewModel.swift */; };
+		D19F46D027F6494400C78465 /* BookCommentsCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19F46CF27F6494400C78465 /* BookCommentsCardViewController.swift */; };
 		D1CCAF7327E4F47500360B12 /* LibraryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1CCAF7227E4F47500360B12 /* LibraryView.xib */; };
 		D1CCAF7527E4F83A00360B12 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CCAF7427E4F83A00360B12 /* LibraryView.swift */; };
 		D1CF93D627F204E4009E3F84 /* RentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CF93D527F204E4009E3F84 /* RentRepository.swift */; };
@@ -91,6 +99,14 @@
 		D19C956E27F37BC900064F91 /* BookCommentsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCommentsCell.xib; sourceTree = "<group>"; };
 		D19C957127F3867700064F91 /* CommentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentRepository.swift; sourceTree = "<group>"; };
 		D19C957327F386C000064F91 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		D19F46C127F6335300C78465 /* BookDetailsCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsCardView.swift; sourceTree = "<group>"; };
+		D19F46C327F6336600C78465 /* BookDetailsCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookDetailsCardView.xib; sourceTree = "<group>"; };
+		D19F46C527F633B900C78465 /* BookDetailsCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsCardViewController.swift; sourceTree = "<group>"; };
+		D19F46C727F633DF00C78465 /* BookDetailsCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsCardViewModel.swift; sourceTree = "<group>"; };
+		D19F46C927F648E300C78465 /* BookCommentsCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCommentsCardView.swift; sourceTree = "<group>"; };
+		D19F46CB27F648FA00C78465 /* BookCommentsCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCommentsCardView.xib; sourceTree = "<group>"; };
+		D19F46CD27F6490E00C78465 /* BookCommentsCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCommentsCardViewModel.swift; sourceTree = "<group>"; };
+		D19F46CF27F6494400C78465 /* BookCommentsCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCommentsCardViewController.swift; sourceTree = "<group>"; };
 		D1CCAF7227E4F47500360B12 /* LibraryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryView.xib; sourceTree = "<group>"; };
 		D1CCAF7427E4F83A00360B12 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		D1CF93D527F204E4009E3F84 /* RentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentRepository.swift; sourceTree = "<group>"; };
@@ -164,7 +180,8 @@
 		D12DDD7C27EBAACB00E58C77 /* BookDetails */ = {
 			isa = PBXGroup;
 			children = (
-				D19C956C27F37B6700064F91 /* BookCommentsCell */,
+				D19F46C027F632F000C78465 /* BookDetailsCard */,
+				D19F46BF27F632DE00C78465 /* BookCommentsCard */,
 				D12DDD7D27EBAAFC00E58C77 /* BookDetailsView.xib */,
 				D12DDD7F27EBAB0C00E58C77 /* BookDetailsView.swift */,
 				D118EFFF27EE3675000FF5D6 /* BookDetailsViewController.swift */,
@@ -213,6 +230,29 @@
 				D19C956E27F37BC900064F91 /* BookCommentsCell.xib */,
 			);
 			path = BookCommentsCell;
+			sourceTree = "<group>";
+		};
+		D19F46BF27F632DE00C78465 /* BookCommentsCard */ = {
+			isa = PBXGroup;
+			children = (
+				D19C956C27F37B6700064F91 /* BookCommentsCell */,
+				D19F46C927F648E300C78465 /* BookCommentsCardView.swift */,
+				D19F46CB27F648FA00C78465 /* BookCommentsCardView.xib */,
+				D19F46CD27F6490E00C78465 /* BookCommentsCardViewModel.swift */,
+				D19F46CF27F6494400C78465 /* BookCommentsCardViewController.swift */,
+			);
+			path = BookCommentsCard;
+			sourceTree = "<group>";
+		};
+		D19F46C027F632F000C78465 /* BookDetailsCard */ = {
+			isa = PBXGroup;
+			children = (
+				D19F46C127F6335300C78465 /* BookDetailsCardView.swift */,
+				D19F46C327F6336600C78465 /* BookDetailsCardView.xib */,
+				D19F46C527F633B900C78465 /* BookDetailsCardViewController.swift */,
+				D19F46C727F633DF00C78465 /* BookDetailsCardViewModel.swift */,
+			);
+			path = BookDetailsCard;
 			sourceTree = "<group>";
 		};
 		D1CCAF7627E4FA9000360B12 /* Login */ = {
@@ -415,8 +455,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D19F46C427F6336600C78465 /* BookDetailsCardView.xib in Resources */,
 				D1CCAF7327E4F47500360B12 /* LibraryView.xib in Resources */,
 				D1150D6727D0F42600BF7A5C /* LibraryViewCell.xib in Resources */,
+				D19F46CC27F648FA00C78465 /* BookCommentsCardView.xib in Resources */,
 				D187883727DA744C005399D4 /* Localizable.strings in Resources */,
 				D13E89DF27E8EF8E006995D9 /* LoginView.xib in Resources */,
 				D1DC75962799E6A3002BB45E /* LaunchScreen.storyboard in Resources */,
@@ -567,10 +609,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D19F46C827F633DF00C78465 /* BookDetailsCardViewModel.swift in Sources */,
 				D110BE2C27F496D200EA28D9 /* UserRepository.swift in Sources */,
 				D1DC758E2799E69B002BB45E /* LoginViewController.swift in Sources */,
 				D13761D127DFCFC70078F1D0 /* LibraryViewModel.swift in Sources */,
 				D19C957227F3867700064F91 /* CommentRepository.swift in Sources */,
+				D19F46CA27F648E300C78465 /* BookCommentsCardView.swift in Sources */,
 				D1CF93DA27F227D6009E3F84 /* RentResponse.swift in Sources */,
 				D118F00027EE3675000FF5D6 /* BookDetailsViewController.swift in Sources */,
 				D1DC758A2799E69B002BB45E /* AppDelegate.swift in Sources */,
@@ -583,10 +627,14 @@
 				D1DC758C2799E69B002BB45E /* SceneDelegate.swift in Sources */,
 				D19C956F27F37BC900064F91 /* BookCommentsCell.swift in Sources */,
 				D13E89DD27E8EF75006995D9 /* LoginView.swift in Sources */,
+				D19F46C627F633B900C78465 /* BookDetailsCardViewController.swift in Sources */,
 				D19C957427F386C000064F91 /* Comment.swift in Sources */,
 				D1F454DC27E9FD6C00EDD6CC /* BookRepository.swift in Sources */,
+				D19F46D027F6494400C78465 /* BookCommentsCardViewController.swift in Sources */,
 				D1CF93D627F204E4009E3F84 /* RentRepository.swift in Sources */,
+				D19F46C227F6335300C78465 /* BookDetailsCardView.swift in Sources */,
 				D1CF93D827F2262A009E3F84 /* Rent.swift in Sources */,
+				D19F46CE27F6490E00C78465 /* BookCommentsCardViewModel.swift in Sources */,
 				D1150D6627D0F42600BF7A5C /* LibraryViewCell.swift in Sources */,
 				D110BE2927F4963200EA28D9 /* User.swift in Sources */,
 			);
