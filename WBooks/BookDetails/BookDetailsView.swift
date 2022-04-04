@@ -9,7 +9,6 @@ import UIKit
 import WolmoCore
 
 class BookDetailsView: NibView {
-    
     @IBOutlet weak var bookCoverImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
@@ -24,7 +23,7 @@ class BookDetailsView: NibView {
     }
     @IBOutlet var view: UIView! {
         didSet {
-            view.backgroundColor = UIColor(hex: "#EAF6FA")
+            view.backgroundColor = .backgroundGray
         }
     }
     @IBOutlet weak var wishlistButton: UIButton! {

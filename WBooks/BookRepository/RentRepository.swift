@@ -6,15 +6,14 @@
 //
 
 import Foundation
-
-import UIKit
 import Alamofire
 
 public class RentRepository {
     public func rentBook(onSuccess: @escaping (RentResponse) -> Void,
                          onError: @escaping (Error) -> Void,
-                         parameters: Rent) {
-        let url = URL(string: "https://private-deb86-wbooksiostraining.apiary-mock.com/users/10/rents")!
+                         parameters: Rent,
+                         userID: Int) {
+        let url = URL(string: "https://private-deb86-wbooksiostraining.apiary-mock.com/users/\(userID)/rents")!
         AF.request(url, method: .post, parameters: parameters,
                    encoder: JSONParameterEncoder.default)
         .responseDecodable(of: RentResponse.self) { response in
