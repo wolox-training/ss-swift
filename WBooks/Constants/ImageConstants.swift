@@ -9,4 +9,5 @@ import UIKit
 
 extension UIImage {
     static let cover = UIImage(named: "img_book5")
+    static let userProfile = UIImage(named: "img_user1")
 }

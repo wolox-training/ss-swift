@@ -116,7 +116,7 @@ extension BookDetailsViewController: UITableViewDelegate, UITableViewDataSource 
         bookDetailsViewModel.getUser(id: comment.userID) { [weak self] in
             cell.usernameLabel.text = self?.bookDetailsViewModel.user?.username
         }
-        cell.userImage.image = UIImage(named: "img_user1")
+        cell.userImage.image = .userProfile
         cell.commentLabel.text = comment.content
         return cell
     }
