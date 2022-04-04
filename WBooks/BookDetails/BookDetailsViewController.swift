@@ -57,10 +57,10 @@ class BookDetailsViewController: UIViewController {
         bookDetailsView.authorLabel.text = book.author
         bookDetailsView.yearLabel.text = book.year
         bookDetailsView.genreLabel.text = book.genre
-        bookDetailsView.bookCoverImage.image = UIImage(named: "img_book5")
+        bookDetailsView.bookCoverImage.image = .cover
        
         bookDetailsView.statusLabel.textColor = book.status == "Available" ?
-        UIColor(hex: "#A5CD39"):UIColor(hex: "#D0021B")
+            .available:.unavailable
     }
     
     private func rentBook() {
@@ -74,7 +74,7 @@ class BookDetailsViewController: UIViewController {
     private func loadRent() {
         bookDetailsViewModel.rentBook { [weak self] in
             self?.bookDetailsView.statusLabel.text = "Unavailable".localized()
-            self?.bookDetailsView.statusLabel.textColor = UIColor(hex: "#D0021B")
+            self?.bookDetailsView.statusLabel.textColor = .unavailable
         }
     }
     
@@ -83,4 +83,5 @@ class BookDetailsViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "OK".localized(), style: UIAlertAction.Style.default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
+
 }

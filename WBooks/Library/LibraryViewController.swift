@@ -70,7 +70,7 @@ extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
         let book = viewModel.books[indexPath.row]
         cell.bookTitle.text = book.title
         cell.bookAuthor.text = book.author
-        cell.bookCover.image = UIImage(named: "img_book5")
+        cell.bookCover.image = .cover
         return cell
     }
     

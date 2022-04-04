@@ -6,7 +6,6 @@
 //
 
 import Foundation
-
 public struct Rent: Codable {
     let userID: Int
     let bookID: Int
