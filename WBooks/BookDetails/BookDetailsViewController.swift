@@ -26,12 +26,7 @@ class BookDetailsViewController: UIViewController {
         super.viewDidLoad()
         tabBarController?.tabBar.isHidden = true
         loadComment()
-        guard let table = bookDetailsView.commentsTableView else { return }
-        table.register(
-            UINib(nibName: cellIdentifier, bundle: nil),
-            forCellReuseIdentifier: cellIdentifier)
-        table.delegate = self
-        table.dataSource = self
+        setUpTableView()
         setBookDetails()
         setUpNavBar()
         bookDetailsView.onRentButton = rentBook
@@ -40,7 +35,16 @@ class BookDetailsViewController: UIViewController {
     override func loadView() {
         view = bookDetailsView
     }
-    
+
+    private func setUpTableView() {
+        guard let table = bookDetailsView.commentsTableView else { return }
+        table.register(
+            UINib(nibName: cellIdentifier, bundle: nil),
+            forCellReuseIdentifier: cellIdentifier)
+        table.delegate = self
+        table.dataSource = self
+    }
+
     private func setUpNavBar() {
         let title = UILabel()
         title.font = UIFont.boldSystemFont(ofSize: 17)
