@@ -54,7 +54,7 @@ class BookDetailsViewController: UIViewController {
         navigationItem.titleView = title
 
         let navbarAppearance = UINavigationBarAppearance()
-        navbarAppearance.backgroundColor = UIColor(hex: "#00ADEE")
+        navbarAppearance.backgroundColor = .backgroundNavBar
 
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.standardAppearance = navbarAppearance
@@ -68,13 +68,10 @@ class BookDetailsViewController: UIViewController {
         bookDetailsView.authorLabel.text = book.author
         bookDetailsView.yearLabel.text = book.year
         bookDetailsView.genreLabel.text = book.genre
-        bookDetailsView.bookCoverImage.image = UIImage(named: "img_book5")
+        bookDetailsView.bookCoverImage.image = .cover
        
-        if book.status == "Available" {
-            bookDetailsView.statusLabel.textColor = UIColor(hex: "#A5CD39")
-        } else {
-            bookDetailsView.statusLabel.textColor = UIColor(hex: "#D0021B")
-        }
+        bookDetailsView.statusLabel.textColor = book.status == "Available" ?
+            .available:.unavailable
     }
     
     private func rentBook() {
@@ -88,7 +85,7 @@ class BookDetailsViewController: UIViewController {
     private func loadRent() {
         bookDetailsViewModel.rentBook { [weak self] in
             self?.bookDetailsView.statusLabel.text = "Unavailable".localized()
-            self?.bookDetailsView.statusLabel.textColor = UIColor(hex: "#D0021B")
+            self?.bookDetailsView.statusLabel.textColor = .unavailable
         }
     }
     
@@ -100,9 +97,10 @@ class BookDetailsViewController: UIViewController {
     
     func showAlertBookUnavailble(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        alert.addAction(UIAlertAction(title: "OK".localized(), style: UIAlertAction.Style.default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
+
 }
 
 extension BookDetailsViewController: UITableViewDelegate, UITableViewDataSource {
