@@ -219,6 +219,15 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+        D19C956C27F37B6700064F91 /* BookCommentsCell */ = {
+            isa = PBXGroup;
+            children = (
+                D19C956D27F37BC900064F91 /* BookCommentsCell.swift */,
+                D19C956E27F37BC900064F91 /* BookCommentsCell.xib */,
+            );
+            path = BookCommentsCell;
+            sourceTree = "<group>";
+        };
 		D1CCAF7627E4FA9000360B12 /* Login */ = {
 			isa = PBXGroup;
 			children = (
