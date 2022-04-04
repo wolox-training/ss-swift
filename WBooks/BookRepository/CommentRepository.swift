@@ -5,7 +5,6 @@
 //  Created by sebastian.a.spadea on 29/03/2022.
 //
 
-import UIKit
 import Alamofire
 
 public class CommentRepository {
