@@ -37,12 +37,12 @@ class BookDetailsCardViewController: UIViewController {
             bookDetailsCardView.authorLabel.text = book.author
             bookDetailsCardView.yearLabel.text = book.year
             bookDetailsCardView.genreLabel.text = book.genre
-            bookDetailsCardView.bookCoverImage.image = UIImage(named: "img_book5")
+            bookDetailsCardView.bookCoverImage.image = .cover
            
             if book.status == "Available" {
-                bookDetailsCardView.statusLabel.textColor = UIColor(hex: "#A5CD39")
+                bookDetailsCardView.statusLabel.textColor = .available
             } else {
-                bookDetailsCardView.statusLabel.textColor = UIColor(hex: "#D0021B")
+                bookDetailsCardView.statusLabel.textColor = .unavailable
             }
         }
         
@@ -57,7 +57,7 @@ class BookDetailsCardViewController: UIViewController {
         private func loadRent() {
             bookDetailsCardViewModel.rentBook { [weak self] in
                 self?.bookDetailsCardView.statusLabel.text = "Unavailable".localized()
-                self?.bookDetailsCardView.statusLabel.textColor = UIColor(hex: "#D0021B")
+                self?.bookDetailsCardView.statusLabel.textColor = .unavailable
             }
         }
         

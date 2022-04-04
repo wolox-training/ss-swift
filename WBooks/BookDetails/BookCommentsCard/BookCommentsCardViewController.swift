@@ -26,6 +26,10 @@ class BookCommentsCardViewController: UIViewController {
         super.viewDidLoad()
         tabBarController?.tabBar.isHidden = true
         loadComment()
+        setUpTableView()
+    }
+    
+    private func setUpTableView() {
         guard let table = bookCommentsCardView.commentsTableView else { return }
         table.register(
             UINib(nibName: cellIdentifier, bundle: nil),
@@ -58,7 +62,7 @@ extension BookCommentsCardViewController: UITableViewDelegate, UITableViewDataSo
         bookCommentsCardViewModel.getUser(id: comment.userID) { [weak self] in
             cell.usernameLabel.text = self?.bookCommentsCardViewModel.user?.username
         }
-        cell.userImage.image = UIImage(named: "img_user1")
+        cell.userImage.image = .userProfile
         cell.commentLabel.text = comment.content
         return cell
     }
