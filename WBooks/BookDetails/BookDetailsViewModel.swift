@@ -9,57 +9,8 @@ import Foundation
 
 class BookDetailsViewModel {
     let book: Book
-    private var rentRepository = RentRepository()
-    private(set) var comments: [Comment] = []
-    private var commentRepository = CommentRepository()
-    private var userRepository = UserRepository()
-    private(set) var user: User?
     
     init(book: Book) {
         self.book = book
-    }
-    
-    func rentBook(action: @escaping () -> Void) {
-        let onSuccess = { (_: RentResponse) in
-            action()
-        }
-        let onError = { error in print(error) }
-        rentRepository.rentBook( onSuccess: onSuccess,
-                                 onError: onError,
-                                 parameters: getParametersRent(),
-                                 userID: 10)
-    }
-    
-    func getParametersRent() -> Rent {
-        let userID = 10
-        let today = Date()
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        let theCalendar = Calendar.current
-        let nextDate = theCalendar.date(byAdding: .day, value: 1, to: today)
-        let parameters = Rent(userID: userID,
-                              bookID: book.id,
-                              fromDate: formatter.string(from: today),
-                              toDate: formatter.string(from: nextDate!)
-        )
-        return parameters
-    }
-    
-    func getComments(action: @escaping () -> Void) {
-        let onSuccess = { (comments: [Comment]) in
-            self.comments = comments
-            action()
-        }
-        let onError = { error in print(error) }
-        commentRepository.fetchComments(onSuccess: onSuccess, onError: onError, bookID: book.id)
-    }
-    
-    func getUser(id: Int, action: @escaping () -> Void) {
-        let onSuccess = { (user: User) in
-            self.user = user
-            action()
-        }
-        let onError = { error in print(error) }
-        userRepository.fetchUsers(onSuccess: onSuccess, onError: onError, userID: id)
     }
 }
