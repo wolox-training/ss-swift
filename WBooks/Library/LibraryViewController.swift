@@ -22,7 +22,7 @@ class LibraryViewController: UIViewController {
         table.register(
             UINib(nibName: cellIdentifier, bundle: nil),
             forCellReuseIdentifier: cellIdentifier)
-        table.backgroundColor = UIColor(hex: "#EAF6FA")
+        table.backgroundColor = .backgroundGray
         table.delegate = self
         table.dataSource = self
         setUpNavBar()
@@ -49,7 +49,7 @@ class LibraryViewController: UIViewController {
         setNavigationRightButtons([search])
 
         let navbarAppearance = UINavigationBarAppearance()
-        navbarAppearance.backgroundColor = UIColor(hex: "#00ADEE")
+        navbarAppearance.backgroundColor = .backgroundNavBar
 
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.standardAppearance = navbarAppearance
@@ -60,7 +60,7 @@ class LibraryViewController: UIViewController {
 extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
     // MARK: - Table view data source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.viewModel.books.count
+        return viewModel.books.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -70,7 +70,14 @@ extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
         let book = viewModel.books[indexPath.row]
         cell.bookTitle.text = book.title
         cell.bookAuthor.text = book.author
-        cell.bookCover.image = UIImage(named: "img_book5")
+        cell.bookCover.image = .cover
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let book = viewModel.books[indexPath.row]
+        let bookDetailsViewModel = BookDetailsViewModel(book: book)
+        let bookDetailsViewController = BookDetailsViewController(bookDetailsViewModel: bookDetailsViewModel)
+        navigationController?.pushViewController(bookDetailsViewController, animated: true)
     }
 }

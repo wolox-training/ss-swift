@@ -14,12 +14,14 @@ public struct Book: Codable {
     let genre: String
     let year: String
     let image: String
-    init(author: String, title: String, image: String, genre: String, year: String, id: Int) {
+    let status: String
+    init(author: String, title: String, image: String, genre: String, year: String, id: Int, status: String) {
         self.author = author
         self.title = title
         self.image = image
         self.genre = genre
         self.year = year
         self.id = id
+        self.status = status
     }
 }
