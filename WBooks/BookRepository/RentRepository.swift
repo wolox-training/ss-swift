@@ -6,8 +6,6 @@
 //
 
 import Foundation
-
-import UIKit
 import Alamofire
 
 public class RentRepository {

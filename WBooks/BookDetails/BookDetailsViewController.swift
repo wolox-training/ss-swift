@@ -9,7 +9,7 @@ import UIKit
 import WolmoCore
 
 class BookDetailsViewController: UIViewController {
-    
+    private let cellIdentifier = "BookCommentsCell"
     private lazy var bookDetailsView = BookDetailsView()
     private let bookDetailsViewModel: BookDetailsViewModel
     
@@ -25,6 +25,8 @@ class BookDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tabBarController?.tabBar.isHidden = true
+        loadComment()
+        setUpTableView()
         setBookDetails()
         setUpNavBar()
         bookDetailsView.onRentButton = rentBook
@@ -33,7 +35,16 @@ class BookDetailsViewController: UIViewController {
     override func loadView() {
         view = bookDetailsView
     }
-    
+
+    private func setUpTableView() {
+        guard let table = bookDetailsView.commentsTableView else { return }
+        table.register(
+            UINib(nibName: cellIdentifier, bundle: nil),
+            forCellReuseIdentifier: cellIdentifier)
+        table.delegate = self
+        table.dataSource = self
+    }
+
     private func setUpNavBar() {
         let title = UILabel()
         title.font = UIFont.boldSystemFont(ofSize: 17)
@@ -78,10 +89,35 @@ class BookDetailsViewController: UIViewController {
         }
     }
     
+    private func loadComment() {
+        bookDetailsViewModel.getComments { [weak self] in
+            self?.bookDetailsView.commentsTableView.reloadData()
+        }
+    }
+    
     func showAlertBookUnavailble(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK".localized(), style: UIAlertAction.Style.default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
 
+}
+
+extension BookDetailsViewController: UITableViewDelegate, UITableViewDataSource {
+    // MARK: - Table view data source
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return bookDetailsViewModel.comments.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+                as? BookCommentsCell else { return UITableViewCell() }
+        let comment = bookDetailsViewModel.comments[indexPath.row]
+        bookDetailsViewModel.getUser(id: comment.userID) { [weak self] in
+            cell.usernameLabel.text = self?.bookDetailsViewModel.user?.username
+        }
+        cell.userImage.image = .userProfile
+        cell.commentLabel.text = comment.content
+        return cell
+    }
 }

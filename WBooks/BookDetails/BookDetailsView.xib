@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -12,11 +13,13 @@
                 <outlet property="authorLabel" destination="83q-hj-CgQ" id="xNo-Ok-l0e"/>
                 <outlet property="bookCoverImage" destination="JZ4-yS-OPW" id="XUT-F6-1bf"/>
                 <outlet property="bookDetailsCard" destination="F0Y-TD-igL" id="oXG-IP-32J"/>
+                <outlet property="commentsTableView" destination="hMy-8k-ykG" id="H8f-BF-Nhd"/>
                 <outlet property="genreLabel" destination="AM6-K6-E3z" id="3F4-e4-S05"/>
                 <outlet property="rentButton" destination="nke-Y5-aMU" id="YzX-1z-Tur"/>
                 <outlet property="statusLabel" destination="yBN-lN-UDQ" id="Nxw-sk-Jeu"/>
                 <outlet property="titleLabel" destination="w0F-mE-xrJ" id="a1f-5p-PLV"/>
                 <outlet property="view" destination="Ay4-B2-fFb" id="rDa-Is-UaL"/>
+                <outlet property="viewTable" destination="0CS-ot-5A2" id="jfu-GP-BnZ"/>
                 <outlet property="wishlistButton" destination="3qp-7m-xFA" id="exd-IF-QR9"/>
                 <outlet property="yearLabel" destination="6K4-Re-Bcw" id="4ob-ST-k4c"/>
             </connections>
@@ -118,15 +121,40 @@
                         <constraint firstItem="w0F-mE-xrJ" firstAttribute="leading" secondItem="JZ4-yS-OPW" secondAttribute="trailing" constant="10" id="yVB-8G-76e"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0CS-ot-5A2">
+                    <rect key="frame" x="20" y="340" width="335" height="293"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMy-8k-ykG">
+                            <rect key="frame" x="2" y="2" width="331" height="289"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="hMy-8k-ykG" firstAttribute="leading" secondItem="0CS-ot-5A2" secondAttribute="leading" constant="2" id="25x-M9-5BP"/>
+                        <constraint firstAttribute="trailing" secondItem="hMy-8k-ykG" secondAttribute="trailing" constant="2" id="4is-KV-ACD"/>
+                        <constraint firstItem="hMy-8k-ykG" firstAttribute="top" secondItem="0CS-ot-5A2" secondAttribute="top" constant="2" id="FWp-qX-fhs"/>
+                        <constraint firstAttribute="bottom" secondItem="hMy-8k-ykG" secondAttribute="bottom" constant="2" id="VBy-LA-ukA"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="kw7-ul-kQJ"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="0CS-ot-5A2" firstAttribute="top" secondItem="F0Y-TD-igL" secondAttribute="bottom" constant="35" id="8By-lu-HOd"/>
+                <constraint firstItem="0CS-ot-5A2" firstAttribute="leading" secondItem="kw7-ul-kQJ" secondAttribute="leading" constant="20" id="99v-5h-FXI"/>
+                <constraint firstItem="kw7-ul-kQJ" firstAttribute="trailing" secondItem="0CS-ot-5A2" secondAttribute="trailing" constant="20" id="N1x-kr-KXi"/>
                 <constraint firstItem="F0Y-TD-igL" firstAttribute="leading" secondItem="kw7-ul-kQJ" secondAttribute="leading" constant="20" id="Y1F-GX-7zJ"/>
+                <constraint firstItem="kw7-ul-kQJ" firstAttribute="bottom" secondItem="0CS-ot-5A2" secondAttribute="bottom" constant="34" id="acs-j0-HEU"/>
                 <constraint firstItem="kw7-ul-kQJ" firstAttribute="trailing" secondItem="F0Y-TD-igL" secondAttribute="trailing" constant="20" id="mJS-Hg-WwO"/>
                 <constraint firstItem="F0Y-TD-igL" firstAttribute="top" secondItem="kw7-ul-kQJ" secondAttribute="top" constant="35" id="sli-Li-rux"/>
             </constraints>
             <point key="canvasLocation" x="-508" y="63.418290854572717"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
