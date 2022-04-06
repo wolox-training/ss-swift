@@ -8,7 +8,7 @@
 import UIKit
 import WolmoCore
 
-class LoginView: NibView {
+final class LoginView: NibView {
     @IBOutlet var view: UIView!
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!

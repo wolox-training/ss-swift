@@ -8,7 +8,7 @@
 import UIKit
 import WolmoCore
 
-class LibraryView: NibView {
+final class LibraryView: NibView {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet var view: UIView!
 }

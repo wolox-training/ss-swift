@@ -8,7 +8,7 @@
 import UIKit
 import WolmoCore
 
-class LibraryViewCell: UITableViewCell {
+final class LibraryViewCell: UITableViewCell {
     @IBOutlet weak var bookTitle: UILabel!
     @IBOutlet weak var bookCover: UIImageView!
     @IBOutlet weak var bookAuthor: UILabel!

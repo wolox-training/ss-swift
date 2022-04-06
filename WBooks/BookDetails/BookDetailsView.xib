@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookDetailsView" customModule="WBooks" customModuleProvider="target">
             <connections>
-                <outlet property="view" destination="Ay4-B2-fFb" id="rDa-Is-UaL"/>
+                <outlet property="view" destination="Ay4-B2-fFb" id="KQ3-QP-BUc"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

@@ -8,10 +8,10 @@
 import UIKit
 import WolmoCore
 
-class BookCommentsCardViewController: UIViewController {
+final class BookCommentsCardViewController: UIViewController {
     private let cellIdentifier = "BookCommentsCell"
     private lazy var bookCommentsCardView = BookCommentsCardView()
-    private let bookCommentsCardViewModel: BookCommentsCardViewModel
+    private var bookCommentsCardViewModel: BookCommentsCardViewModelProtocol
     
     init(bookCommentsCardViewModel: BookCommentsCardViewModel) {
         self.bookCommentsCardViewModel = bookCommentsCardViewModel

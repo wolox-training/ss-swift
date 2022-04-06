@@ -7,9 +7,9 @@
 
 import UIKit
 
-class BookDetailsCardViewController: UIViewController {
+final class BookDetailsCardViewController: UIViewController {
         private lazy var bookDetailsCardView = BookDetailsCardView()
-        private let bookDetailsCardViewModel: BookDetailsCardViewModel
+        private let bookDetailsCardViewModel: BookDetailsCardViewModelProtocol
         
         init(bookDetailsCardViewModel: BookDetailsCardViewModel) {
             self.bookDetailsCardViewModel = bookDetailsCardViewModel
@@ -24,6 +24,7 @@ class BookDetailsCardViewController: UIViewController {
             super.viewDidLoad()
             tabBarController?.tabBar.isHidden = true
             bookDetailsCardView.onRentButton = rentBook
+            setBookDetails()
         }
         
         override func loadView() {
@@ -60,8 +61,7 @@ class BookDetailsCardViewController: UIViewController {
                 self?.bookDetailsCardView.statusLabel.textColor = .unavailable
             }
         }
-        
-        
+
         func showAlertBookUnavailble(title: String, message: String) {
             let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))

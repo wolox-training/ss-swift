@@ -8,7 +8,7 @@
 import Foundation
 import WolmoCore
 
-class BookDetailsCardView: NibView {
+final class BookDetailsCardView: NibView {
     @IBOutlet weak var bookCoverImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!

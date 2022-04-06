@@ -7,13 +7,21 @@
 
 import Foundation
 
-class BookCommentsCardViewModel {
-    let book: Book
-    private(set) var comments: [Comment] = []
+protocol BookCommentsCardViewModelProtocol {
+    func getComments(action: @escaping () -> Void)
+    func getUser(id: Int, action: @escaping () -> Void)
+    var comments: [Comment] { get set }
+    var user: User? { get set }
+    var book: Book { get set }
+}
+
+class BookCommentsCardViewModel: BookCommentsCardViewModelProtocol {
+    var book: Book
+    var comments: [Comment] = []
     private var commentRepository = CommentRepository()
     private var userRepository = UserRepository()
-    private(set) var user: User?
-    
+    var user: User?
+
     init(book: Book) {
         self.book = book
     }

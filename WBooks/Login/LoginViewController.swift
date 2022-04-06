@@ -8,7 +8,7 @@
 import UIKit
 import WolmoCore
 
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
     private let loginView = LoginView()
 
     override func loadView() {

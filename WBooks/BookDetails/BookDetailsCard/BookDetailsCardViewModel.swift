@@ -7,8 +7,14 @@
 
 import Foundation
 
-class BookDetailsCardViewModel {
-    let book: Book
+protocol BookDetailsCardViewModelProtocol {
+    func rentBook(action: @escaping () -> Void)
+    func getParametersRent() -> Rent
+    var book: Book { get }
+}
+
+class BookDetailsCardViewModel: BookDetailsCardViewModelProtocol {
+    var book: Book
     private var rentRepository = RentRepository()
     
     init(book: Book) {

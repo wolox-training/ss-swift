@@ -8,9 +8,7 @@
 import Foundation
 
 public struct Comment: Decodable {
-    let id: Int
-    let userID: Int
-    let bookID: Int
+    let id, userID, bookID: Int
     let content: String
     
     private enum CodingKeys: String, CodingKey {

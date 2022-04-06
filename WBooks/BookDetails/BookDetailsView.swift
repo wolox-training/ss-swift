@@ -8,7 +8,7 @@
 import UIKit
 import WolmoCore
 
-class BookDetailsView: NibView {
+final class BookDetailsView: NibView {
     @IBOutlet var view: UIView! {
         didSet {
             view.backgroundColor = .backgroundGray

@@ -7,8 +7,6 @@
 
 import Foundation
 public struct Rent: Codable {
-    let userID: Int
-    let bookID: Int
-    let fromDate: String
-    let toDate: String
+    let userID, bookID: Int
+    let fromDate, toDate: String
 }

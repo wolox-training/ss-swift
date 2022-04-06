@@ -7,10 +7,24 @@
 
 import Foundation
 
-class BookDetailsViewModel {
-    let book: Book
+protocol BookDetailsViewModelProtocol {
+    func bookDetailsCardViewModel() -> BookDetailsCardViewModel
+    func bookCommentsCardViewModel() -> BookCommentsCardViewModel
+    var book: Book { get set }
+}
+
+class BookDetailsViewModel: BookDetailsViewModelProtocol {
+    var book: Book
     
     init(book: Book) {
         self.book = book
+    }
+    
+    func bookDetailsCardViewModel() -> BookDetailsCardViewModel {
+        return BookDetailsCardViewModel(book: book)
+    }
+    
+    func bookCommentsCardViewModel() -> BookCommentsCardViewModel {
+        return BookCommentsCardViewModel(book: book)
     }
 }

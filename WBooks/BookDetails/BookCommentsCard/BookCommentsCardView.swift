@@ -8,7 +8,7 @@
 import Foundation
 import WolmoCore
 
-class BookCommentsCardView: NibView {
+final class BookCommentsCardView: NibView {
     @IBOutlet weak var commentsTableView: UITableView! {
         didSet {
             commentsTableView.backgroundColor = .white

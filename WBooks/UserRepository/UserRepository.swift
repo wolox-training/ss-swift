@@ -8,7 +8,13 @@
 import Foundation
 import Alamofire
 
-public class UserRepository {
+protocol UserRepositoryProtocol {
+    func fetchUsers(onSuccess: @escaping (User) -> Void,
+                    onError: @escaping (Error) -> Void,
+                    userID: Int)
+}
+
+internal class UserRepository: UserRepositoryProtocol {
     public func fetchUsers(onSuccess: @escaping (User) -> Void,
                            onError: @escaping (Error) -> Void,
                            userID: Int) {

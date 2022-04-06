@@ -7,7 +7,13 @@
 
 import Alamofire
 
-public class CommentRepository {
+protocol CommentRepositoryProtocol {
+    func fetchComments(onSuccess: @escaping ([Comment]) -> Void,
+                       onError: @escaping (Error) -> Void,
+                       bookID: Int)
+}
+
+internal class CommentRepository: CommentRepositoryProtocol {
     public func fetchComments(onSuccess: @escaping ([Comment]) -> Void,
                               onError: @escaping (Error) -> Void,
                               bookID: Int) {
