@@ -14,4 +14,6 @@ final class BookDetailsView: NibView {
             view.backgroundColor = .backgroundGray
         }
     }
+    @IBOutlet weak var detailsCard: UIView!
+    @IBOutlet weak var commentsCard: UIView!
 }

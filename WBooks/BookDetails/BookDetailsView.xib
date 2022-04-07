@@ -4,11 +4,14 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookDetailsView" customModule="WBooks" customModuleProvider="target">
             <connections>
+                <outlet property="commentsCard" destination="szo-Xa-kjX" id="fPN-Yd-Cgy"/>
+                <outlet property="detailsCard" destination="Efv-xC-cfq" id="imU-aG-9Zu"/>
                 <outlet property="view" destination="Ay4-B2-fFb" id="KQ3-QP-BUc"/>
             </connections>
         </placeholder>
@@ -16,9 +19,36 @@
         <view contentMode="scaleToFill" id="Ay4-B2-fFb">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Efv-xC-cfq">
+                    <rect key="frame" x="20" y="35" width="335" height="268"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="268" id="CCJ-Ss-wnw"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="szo-Xa-kjX">
+                    <rect key="frame" x="20" y="338" width="335" height="295"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="kw7-ul-kQJ"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Efv-xC-cfq" firstAttribute="leading" secondItem="kw7-ul-kQJ" secondAttribute="leading" constant="20" id="4ro-8O-EhJ"/>
+                <constraint firstItem="szo-Xa-kjX" firstAttribute="top" secondItem="Efv-xC-cfq" secondAttribute="bottom" constant="35" id="AYJ-w5-DwF"/>
+                <constraint firstItem="Efv-xC-cfq" firstAttribute="top" secondItem="kw7-ul-kQJ" secondAttribute="top" constant="35" id="ROW-Of-1Nq"/>
+                <constraint firstItem="kw7-ul-kQJ" firstAttribute="bottom" secondItem="szo-Xa-kjX" secondAttribute="bottom" constant="34" id="Sst-Vq-QFz"/>
+                <constraint firstItem="szo-Xa-kjX" firstAttribute="leading" secondItem="kw7-ul-kQJ" secondAttribute="leading" constant="20" id="VO1-jJ-amh"/>
+                <constraint firstItem="kw7-ul-kQJ" firstAttribute="trailing" secondItem="Efv-xC-cfq" secondAttribute="trailing" constant="20" id="WSt-fd-NbM"/>
+                <constraint firstItem="kw7-ul-kQJ" firstAttribute="trailing" secondItem="szo-Xa-kjX" secondAttribute="trailing" constant="20" id="yya-AK-Gmm"/>
+            </constraints>
             <point key="canvasLocation" x="-508" y="63.418290854572717"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

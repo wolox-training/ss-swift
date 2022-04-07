@@ -35,26 +35,17 @@ final class BookDetailsViewController: UIViewController {
         super.viewDidLoad()
         tabBarController?.tabBar.isHidden = true
         setUpNavBar()
-        let bookDetailsCardVC = bookDetailsCardViewController.view!
-        bookDetailsCardVC.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(bookDetailsCardVC)
-        NSLayoutConstraint.activate([
-            bookDetailsCardVC.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            bookDetailsCardVC.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            bookDetailsCardVC.topAnchor.constraint(equalTo: view.topAnchor, constant: 35),
-            bookDetailsCardVC.bottomAnchor.constraint(equalTo: view.centerYAnchor, constant: 0)
-        ])
-        let bookCommentsCardVC = bookCommentsCardViewController.view!
-        bookCommentsCardVC.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(bookCommentsCardVC)
-        NSLayoutConstraint.activate([
-            bookCommentsCardVC.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            bookCommentsCardVC.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 20),
-            bookDetailsCardVC.topAnchor.constraint(equalTo: bookDetailsCardVC.bottomAnchor, constant: 35),
-            bookCommentsCardVC.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 34)
-        ])
+        addSection(bookCommentsCardViewController, bookDetailsView.commentsCard)
+        addSection(bookDetailsCardViewController, bookDetailsView.detailsCard)
     }
     
+    private func addSection(_ child: UIViewController, _ viewFrame: UIView) {
+        addChild(child)
+        viewFrame.addSubview(child.view)
+        viewFrame.addSubViewWithConstraints(child: child.view, parent: viewFrame)
+        child.didMove(toParent: self)
+    }
+
     private func setUpNavBar() {
         let title = UILabel()
         title.font = UIFont.boldSystemFont(ofSize: 17)
