@@ -29,6 +29,7 @@ final class BookDetailsCardView: NibView {
     @IBOutlet weak var rentButton: UIButton! {
         didSet {
             rentButton.setTitle("RENT".localized(), for: .normal)
+            rentButton.applyGradient()
         }
     }
     var onRentButton: (() -> Void)?
