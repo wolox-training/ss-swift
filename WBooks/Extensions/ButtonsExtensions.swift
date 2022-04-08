@@ -7,21 +7,37 @@
 
 import Foundation
 import UIKit
-import WolmoCore
 
 extension UIButton {
     func applyGradient() {
-        self.backgroundColor = nil
-        self.tintColor = nil
-        self.layoutIfNeeded()
+        layer.masksToBounds =  true
+        layer.cornerRadius = 20
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [
-            UIColor(hex: "#00ADEC")!.cgColor,
-            UIColor(hex: "#39CCCD")!.cgColor
+            UIColor(red: 0, green: 0.678, blue: 0.925, alpha: 1).cgColor,
+            UIColor(red: 0.224, green: 0.802, blue: 0.804, alpha: 1).cgColor
           ]
         gradientLayer.locations = [0, 1]
-        gradientLayer.startPoint = CGPoint(x: 0.25, y: 0.5)
-        gradientLayer.endPoint = CGPoint(x: 0.75, y: 0.5)
-        self.layer.addSublayer(gradientLayer)
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 0)
+        gradientLayer.frame = bounds
+        layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
+    private func setupGeneral(_ titleColor: UIColor) {
+            setTitleColor(titleColor, for: .normal)
+            layer.masksToBounds =  true
+            layer.cornerRadius = 20
+    }
+
+    func withGradient() {
+        setupGeneral(.white)
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [UIColor.pictonBlue.cgColor, UIColor.downy.cgColor]
+        gradientLayer.locations = [0, 1]
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 0)
+        gradientLayer.frame = bounds
+        layer.insertSublayer(gradientLayer, at: 0)
     }
 }
