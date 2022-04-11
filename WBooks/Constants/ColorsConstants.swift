@@ -12,6 +12,6 @@ extension UIColor {
   static let backgroundNavBar = UIColor(hex: "#00ADEE")
   static let available = UIColor(hex: "#A5CD39")
   static let unavailable = UIColor(hex: "#D0021B")
-    static var pictonBlue: UIColor { return UIColor(red: 75/255, green: 172/255, blue: 230/255, alpha: 1) }
-    static var downy: UIColor { return UIColor(red: 103/255, green: 201/255, blue: 204/255, alpha: 1) }
+  static var pictonBlue: UIColor { return UIColor(red: 75/255, green: 172/255, blue: 230/255, alpha: 1) }
+  static var downy: UIColor { return UIColor(red: 103/255, green: 201/255, blue: 204/255, alpha: 1) }
 }
