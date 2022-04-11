@@ -185,6 +185,13 @@
 			path = UserRepository;
 			sourceTree = "<group>";
 		};
+		D1156E37280468160029FAB8 /* SuggestBook */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SuggestBook;
+			sourceTree = "<group>";
+		};
 		D12DDD7C27EBAACB00E58C77 /* BookDetails */ = {
 			isa = PBXGroup;
 			children = (
@@ -316,6 +323,7 @@
 		D1DC75882799E69B002BB45E /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				D1156E37280468160029FAB8 /* SuggestBook */,
 				D1B6033B27FF5BA20094063F /* Extensions */,
 				D19C957527F38FC300064F91 /* Constants */,
 				D110BE2A27F496BE00EA28D9 /* UserRepository */,
