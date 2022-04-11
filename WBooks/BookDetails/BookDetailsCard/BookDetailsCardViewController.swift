@@ -10,6 +10,8 @@ import UIKit
 final class BookDetailsCardViewController: UIViewController {
         private lazy var bookDetailsCardView = BookDetailsCardView()
         private let bookDetailsCardViewModel: BookDetailsCardViewModelProtocol
+        let available = "Available"
+        let unavailable = "Unavailable".localized()
         
         init(bookDetailsCardViewModel: BookDetailsCardViewModel) {
             self.bookDetailsCardViewModel = bookDetailsCardViewModel
@@ -44,7 +46,7 @@ final class BookDetailsCardViewController: UIViewController {
             bookDetailsCardView.genreLabel.text = book.genre
             bookDetailsCardView.bookCoverImage.image = .cover
            
-            if book.status == "Available" {
+            if book.status == available {
                 bookDetailsCardView.statusLabel.textColor = .available
             } else {
                 bookDetailsCardView.statusLabel.textColor = .unavailable
@@ -52,7 +54,7 @@ final class BookDetailsCardViewController: UIViewController {
         }
         
         private func rentBook() {
-            if bookDetailsCardView.statusLabel.text == "Unavailable".localized() {
+            if bookDetailsCardView.statusLabel.text == unavailable {
                 showAlertBookUnavailble(title: "ALERT_TITLE".localized(), message: "ALERT_MESSAGE".localized())
             } else {
                 loadRent()
@@ -68,7 +70,7 @@ final class BookDetailsCardViewController: UIViewController {
 
         func showAlertBookUnavailble(title: String, message: String) {
             let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            alert.addAction(UIAlertAction(title: "OK".localized(), style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
 }

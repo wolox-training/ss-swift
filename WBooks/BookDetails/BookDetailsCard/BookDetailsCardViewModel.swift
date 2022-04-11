@@ -13,7 +13,7 @@ protocol BookDetailsCardViewModelProtocol {
     var book: Book { get }
 }
 
-class BookDetailsCardViewModel: BookDetailsCardViewModelProtocol {
+public class BookDetailsCardViewModel: BookDetailsCardViewModelProtocol {
     var book: Book
     private var rentRepository = RentRepository()
     
@@ -22,6 +22,7 @@ class BookDetailsCardViewModel: BookDetailsCardViewModelProtocol {
     }
     
     func rentBook(action: @escaping () -> Void) {
+        let userID = 10
         let onSuccess = { (_: RentResponse) in
             action()
         }
@@ -29,7 +30,7 @@ class BookDetailsCardViewModel: BookDetailsCardViewModelProtocol {
         rentRepository.rentBook( onSuccess: onSuccess,
                                  onError: onError,
                                  parameters: getParametersRent(),
-                                 userID: 10)
+                                 userID: userID)
     }
     
     func getParametersRent() -> Rent {
