@@ -32,6 +32,10 @@ final class BookDetailsCardViewController: UIViewController {
         override func loadView() {
             view = bookDetailsCardView
         }
+    
+        override func viewDidAppear(_ animated: Bool) {
+            bookDetailsCardView.rentButton.applyGradient()
+        }
         
         private func setBookDetails() {
             let book = bookDetailsCardViewModel.book
