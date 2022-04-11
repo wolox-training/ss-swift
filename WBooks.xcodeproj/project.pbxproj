@@ -15,6 +15,7 @@
 		D1150D6327CFEE9700BF7A5C /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1150D6227CFEE9700BF7A5C /* LibraryViewController.swift */; };
 		D1150D6627D0F42600BF7A5C /* LibraryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1150D6427D0F42600BF7A5C /* LibraryViewCell.swift */; };
 		D1150D6727D0F42600BF7A5C /* LibraryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1150D6527D0F42600BF7A5C /* LibraryViewCell.xib */; };
+		D1156E39280498160029FAB8 /* BookCommentsCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1156E38280498160029FAB8 /* BookCommentsCellModel.swift */; };
 		D118F00027EE3675000FF5D6 /* BookDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D118EFFF27EE3675000FF5D6 /* BookDetailsViewController.swift */; };
 		D118F00227EE3692000FF5D6 /* BookDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D118F00127EE3692000FF5D6 /* BookDetailsViewModel.swift */; };
 		D12DDD7E27EBAAFC00E58C77 /* BookDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D12DDD7D27EBAAFC00E58C77 /* BookDetailsView.xib */; };
@@ -87,6 +88,7 @@
 		D1150D6227CFEE9700BF7A5C /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		D1150D6427D0F42600BF7A5C /* LibraryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewCell.swift; sourceTree = "<group>"; };
 		D1150D6527D0F42600BF7A5C /* LibraryViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryViewCell.xib; sourceTree = "<group>"; };
+		D1156E38280498160029FAB8 /* BookCommentsCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCommentsCellModel.swift; sourceTree = "<group>"; };
 		D118EFFF27EE3675000FF5D6 /* BookDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsViewController.swift; sourceTree = "<group>"; };
 		D118F00127EE3692000FF5D6 /* BookDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsViewModel.swift; sourceTree = "<group>"; };
 		D12DDD7D27EBAAFC00E58C77 /* BookDetailsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookDetailsView.xib; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 			children = (
 				D19C956D27F37BC900064F91 /* BookCommentsCell.swift */,
 				D19C956E27F37BC900064F91 /* BookCommentsCell.xib */,
+				D1156E38280498160029FAB8 /* BookCommentsCellModel.swift */,
 			);
 			path = BookCommentsCell;
 			sourceTree = "<group>";
@@ -658,6 +661,7 @@
 				D19C957427F386C000064F91 /* Comment.swift in Sources */,
 				D1F454DC27E9FD6C00EDD6CC /* BookRepository.swift in Sources */,
 				D19F46D027F6494400C78465 /* BookCommentsCardViewController.swift in Sources */,
+				D1156E39280498160029FAB8 /* BookCommentsCellModel.swift in Sources */,
 				D1CF93D627F204E4009E3F84 /* RentRepository.swift in Sources */,
 				D19F46C227F6335300C78465 /* BookDetailsCardView.swift in Sources */,
 				D1CF93D827F2262A009E3F84 /* Rent.swift in Sources */,

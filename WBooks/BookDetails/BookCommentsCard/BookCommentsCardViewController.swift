@@ -58,12 +58,10 @@ extension BookCommentsCardViewController: UITableViewDelegate, UITableViewDataSo
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
                 as? BookCommentsCell else { return UITableViewCell() }
-        let comment = bookCommentsCardViewModel.comments[indexPath.row]
-        bookCommentsCardViewModel.getUser(id: comment.userID) { [weak self] in
-            cell.usernameLabel.text = self?.bookCommentsCardViewModel.user?.username
+        let cellViewModel = bookCommentsCardViewModel.getCellViewModel(index: indexPath.row)
+        cellViewModel.getUser {
+            cell.setUpCell(viewModel: cellViewModel)
         }
-        cell.userImage.image = .userProfile
-        cell.commentLabel.text = comment.content
         return cell
     }
 }

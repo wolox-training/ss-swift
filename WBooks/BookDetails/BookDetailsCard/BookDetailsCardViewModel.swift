@@ -13,7 +13,7 @@ protocol BookDetailsCardViewModelProtocol {
     var book: Book { get }
 }
 
-class BookDetailsCardViewModel: BookDetailsCardViewModelProtocol {
+public class BookDetailsCardViewModel: BookDetailsCardViewModelProtocol {
     var book: Book
     private var rentRepository = RentRepository()
     

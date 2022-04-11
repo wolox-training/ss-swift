@@ -9,10 +9,10 @@ import Foundation
 
 protocol BookCommentsCardViewModelProtocol {
     func getComments(action: @escaping () -> Void)
-    func getUser(id: Int, action: @escaping () -> Void)
     var comments: [Comment] { get set }
     var user: User? { get set }
     var book: Book { get set }
+    func getCellViewModel(index: Int) -> BookCommentsCellModel
 }
 
 class BookCommentsCardViewModel: BookCommentsCardViewModelProtocol {
@@ -35,12 +35,7 @@ class BookCommentsCardViewModel: BookCommentsCardViewModelProtocol {
         commentRepository.fetchComments(onSuccess: onSuccess, onError: onError, bookID: book.id)
     }
     
-    func getUser(id: Int, action: @escaping () -> Void) {
-        let onSuccess = { (user: User) in
-            self.user = user
-            action()
-        }
-        let onError = { error in print(error) }
-        userRepository.fetchUsers(onSuccess: onSuccess, onError: onError, userID: id)
+    func getCellViewModel(index: Int) -> BookCommentsCellModel {
+        BookCommentsCellModel(comment: comments[index])
     }
 }

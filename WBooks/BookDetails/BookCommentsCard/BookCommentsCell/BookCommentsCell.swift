@@ -19,4 +19,10 @@ final class BookCommentsCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
     }
+    
+    func setUpCell(viewModel: BookCommentsCellModel) {
+        usernameLabel.text = viewModel.user?.username
+        userImage.image = .userProfile
+        commentLabel.text = viewModel.comment.content
+    }
 }
