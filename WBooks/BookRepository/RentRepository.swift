@@ -8,7 +8,14 @@
 import Foundation
 import Alamofire
 
-public class RentRepository {
+protocol RentRepositoryProtocol {
+    func rentBook(onSuccess: @escaping (RentResponse) -> Void,
+                  onError: @escaping (Error) -> Void,
+                  parameters: Rent,
+                  userID: Int)
+}
+
+internal class RentRepository: RentRepositoryProtocol {
     public func rentBook(onSuccess: @escaping (RentResponse) -> Void,
                          onError: @escaping (Error) -> Void,
                          parameters: Rent,

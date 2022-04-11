@@ -9,7 +9,5 @@ import Foundation
 
 public struct User: Codable {
     let id: Int
-    let username: String
-    let password: String
-    let image: String
+    let username, password, image: String
 }

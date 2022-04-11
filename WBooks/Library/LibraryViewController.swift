@@ -8,7 +8,7 @@
 import UIKit
 import WolmoCore
 
-class LibraryViewController: UIViewController {
+final class LibraryViewController: UIViewController {
     private let cellIdentifier = "LibraryViewCell"
     private let viewModel = LibraryViewModel()
     private let libraryView = LibraryView()
