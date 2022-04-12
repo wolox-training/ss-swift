@@ -10,8 +10,7 @@ import UIKit
 
 extension UIButton {
     func applyGradient() {
-        layer.masksToBounds =  true
-        layer.cornerRadius = 20
+        setupGeneral(.white)
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [
             UIColor.pictonBlue.cgColor,
@@ -28,16 +27,5 @@ extension UIButton {
             setTitleColor(titleColor, for: .normal)
             layer.masksToBounds =  true
             layer.cornerRadius = 20
-    }
-
-    func withGradient() {
-        setupGeneral(.white)
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [UIColor.pictonBlue.cgColor, UIColor.downy.cgColor]
-        gradientLayer.locations = [0, 1]
-        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
-        gradientLayer.endPoint = CGPoint(x: 1, y: 0)
-        gradientLayer.frame = bounds
-        layer.insertSublayer(gradientLayer, at: 0)
     }
 }

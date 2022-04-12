@@ -24,3 +24,7 @@
 "ALERT_TITLE" = "Book unavailable";
 "ALERT_MESSAGE" = "Ooops! The book is not available☹️";
 "OK" = "Ok";
+
+/* ADD NEW BOOK */
+"SUGGEST_BOOK_TITLE" = "SUGGEST BOOK";
+"SUBMIT" = "SUBMIT";

@@ -24,3 +24,7 @@
 "ALERT_TITLE" = "Libro no disponible";
 "ALERT_MESSAGE" = "Ooops! El libro no está disponible!☹️";
 "OK" = "Ok";
+
+/* ADD NEW BOOK */
+"SUGGEST_BOOK_TITLE" = "SUGERIR UN LIBRO";
+"CONFIRMAR" = "CONFIRMAR";
