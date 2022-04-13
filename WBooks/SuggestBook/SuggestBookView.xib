@@ -11,7 +11,12 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SuggestBookView" customModule="WBooks" customModuleProvider="target">
             <connections>
                 <outlet property="addNewBookButton" destination="tWO-Cb-94b" id="Qty-Bq-8T3"/>
+                <outlet property="bookAuthor" destination="6zH-Mg-arB" id="5dX-3I-ERR"/>
+                <outlet property="bookDescription" destination="bKn-AR-IkV" id="OXv-bW-N4a"/>
                 <outlet property="bookImage" destination="3RU-RN-0iI" id="YYa-hS-vLW"/>
+                <outlet property="bookName" destination="M1E-C6-kvk" id="lX5-su-fsR"/>
+                <outlet property="bookTopic" destination="arp-n1-1co" id="d8H-Dj-YX2"/>
+                <outlet property="bookYear" destination="QqP-Br-sQJ" id="BB4-g6-3g8"/>
                 <outlet property="generalView" destination="0OF-ra-vkx" id="Tb5-z2-dMn"/>
                 <outlet property="newBookView" destination="RaC-Cx-0uV" id="92E-Hl-hq5"/>
                 <outlet property="submitButton" destination="9QT-Fc-nlQ" id="tf7-P4-xJC"/>
@@ -43,28 +48,28 @@
                                 <action selector="addNewButtonPress:" destination="-1" eventType="touchUpInside" id="us6-lN-vJI"/>
                             </connections>
                         </button>
-                        <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M1E-C6-kvk">
-                            <rect key="frame" x="30" y="151" width="275" height="34"/>
+                        <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M1E-C6-kvk" customClass="InputFields" customModule="WBooks" customModuleProvider="target">
+                            <rect key="frame" x="30" y="151" width="275" height="28.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6zH-Mg-arB">
-                            <rect key="frame" x="30" y="205" width="275" height="34"/>
+                        <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6zH-Mg-arB" customClass="InputFields" customModule="WBooks" customModuleProvider="target">
+                            <rect key="frame" x="30" y="199.5" width="275" height="28.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QqP-Br-sQJ">
-                            <rect key="frame" x="30" y="259" width="275" height="34"/>
+                        <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QqP-Br-sQJ" customClass="InputFields" customModule="WBooks" customModuleProvider="target">
+                            <rect key="frame" x="30" y="248" width="275" height="28.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="arp-n1-1co">
-                            <rect key="frame" x="30" y="313" width="275" height="34"/>
+                        <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="arp-n1-1co" customClass="InputFields" customModule="WBooks" customModuleProvider="target">
+                            <rect key="frame" x="30" y="296.5" width="275" height="28.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bKn-AR-IkV">
-                            <rect key="frame" x="30" y="367" width="275" height="34"/>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bKn-AR-IkV" customClass="InputFields" customModule="WBooks" customModuleProvider="target">
+                            <rect key="frame" x="30" y="345" width="275" height="28.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
@@ -89,7 +94,7 @@
                         <constraint firstItem="arp-n1-1co" firstAttribute="top" secondItem="QqP-Br-sQJ" secondAttribute="bottom" constant="20" id="Hcf-6J-l1z"/>
                         <constraint firstItem="6zH-Mg-arB" firstAttribute="top" secondItem="M1E-C6-kvk" secondAttribute="bottom" constant="20" id="Hk7-46-niX"/>
                         <constraint firstItem="QqP-Br-sQJ" firstAttribute="leading" secondItem="RaC-Cx-0uV" secondAttribute="leading" constant="30" id="KvB-lI-WYi"/>
-                        <constraint firstItem="9QT-Fc-nlQ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="bKn-AR-IkV" secondAttribute="bottom" constant="52" id="XMr-Eq-BR8"/>
+                        <constraint firstItem="9QT-Fc-nlQ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="bKn-AR-IkV" secondAttribute="bottom" constant="32" id="XMr-Eq-BR8"/>
                         <constraint firstAttribute="trailing" secondItem="9QT-Fc-nlQ" secondAttribute="trailing" constant="30" id="YL9-SM-VWO"/>
                         <constraint firstItem="QqP-Br-sQJ" firstAttribute="top" secondItem="6zH-Mg-arB" secondAttribute="bottom" constant="20" id="ZhW-pG-BYe"/>
                         <constraint firstItem="M1E-C6-kvk" firstAttribute="top" secondItem="3RU-RN-0iI" secondAttribute="bottom" constant="35" id="d5x-DK-PSO"/>
@@ -116,6 +121,23 @@
             <point key="canvasLocation" x="242" y="131"/>
         </view>
     </objects>
+    <designables>
+        <designable name="6zH-Mg-arB">
+            <size key="intrinsicContentSize" width="4" height="28.5"/>
+        </designable>
+        <designable name="M1E-C6-kvk">
+            <size key="intrinsicContentSize" width="4" height="28.5"/>
+        </designable>
+        <designable name="QqP-Br-sQJ">
+            <size key="intrinsicContentSize" width="4" height="28.5"/>
+        </designable>
+        <designable name="arp-n1-1co">
+            <size key="intrinsicContentSize" width="4" height="28.5"/>
+        </designable>
+        <designable name="bKn-AR-IkV">
+            <size key="intrinsicContentSize" width="4" height="28.5"/>
+        </designable>
+    </designables>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -28,3 +28,9 @@
 /* ADD NEW BOOK */
 "SUGGEST_BOOK_TITLE" = "SUGERIR UN LIBRO";
 "CONFIRMAR" = "CONFIRMAR";
+/* PLACEHOLDERS */
+"BOOK_NAME" = "Nombre del libro";
+"YEAR" = "Año";
+"AUTHOR" = "Autor";
+"TOPIC" = "Tema";
+"DESCRIPTION" = "Descripción";

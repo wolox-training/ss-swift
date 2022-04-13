@@ -28,3 +28,10 @@
 /* ADD NEW BOOK */
 "SUGGEST_BOOK_TITLE" = "SUGGEST BOOK";
 "SUBMIT" = "SUBMIT";
+
+/* PLACEHOLDERS */
+"BOOK_NAME" = "Book´s name";
+"YEAR" = "Year";
+"AUTHOR" = "Author";
+"TOPIC" = "Topic";
+"DESCRIPTION" = "Description";

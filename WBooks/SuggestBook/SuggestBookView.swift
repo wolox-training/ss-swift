@@ -35,6 +35,37 @@ final class SuggestBookView: NibView {
             submitButton.applyGradient()
         }
     }
+    
+    @IBOutlet weak var bookName: InputFields! {
+        didSet {
+            bookName.placeholder = "BOOK_NAME".localized()
+        }
+    }
+    
+    @IBOutlet weak var bookAuthor: InputFields! {
+        didSet {
+            bookAuthor.placeholder = "AUTHOR".localized()
+        }
+    }
+    
+    @IBOutlet weak var bookYear: InputFields! {
+        didSet {
+            bookYear.placeholder = "YEAR".localized()
+        }
+    }
+    
+    @IBOutlet weak var bookTopic: InputFields! {
+        didSet {
+            bookTopic.placeholder = "TOPIC".localized()
+        }
+    }
+    
+    @IBOutlet weak var bookDescription: InputFields! {
+        didSet {
+            bookDescription.placeholder = "DESCRIPTION".localized()
+        }
+    }
+    
     @IBAction func addNewButtonPress(_ sender: Any) {
         print("ouch")
     }

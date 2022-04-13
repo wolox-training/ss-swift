@@ -25,6 +25,7 @@
 		D13E89DD27E8EF75006995D9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13E89DC27E8EF75006995D9 /* LoginView.swift */; };
 		D13E89DF27E8EF8E006995D9 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D13E89DE27E8EF8E006995D9 /* LoginView.xib */; };
 		D14E68D927FB2AF8001F0849 /* ImageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14E68D827FB2AF8001F0849 /* ImageConstants.swift */; };
+		D17A0B8B2805FB9D002877C0 /* InputFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17A0B8A2805FB9D002877C0 /* InputFields.swift */; };
 		D18533A527FB8AD70022233A /* BookDetailsCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D18533A427FB8AD70022233A /* BookDetailsCardView.xib */; };
 		D18533A727FB8C580022233A /* BookCommentsCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D18533A627FB8C580022233A /* BookCommentsCardView.xib */; };
 		D187883727DA744C005399D4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D187883927DA744C005399D4 /* Localizable.strings */; };
@@ -103,6 +104,7 @@
 		D13E89DC27E8EF75006995D9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D13E89DE27E8EF8E006995D9 /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		D14E68D827FB2AF8001F0849 /* ImageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageConstants.swift; sourceTree = "<group>"; };
+		D17A0B8A2805FB9D002877C0 /* InputFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFields.swift; sourceTree = "<group>"; };
 		D18533A427FB8AD70022233A /* BookDetailsCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookDetailsCardView.xib; sourceTree = "<group>"; };
 		D18533A627FB8C580022233A /* BookCommentsCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCommentsCardView.xib; sourceTree = "<group>"; };
 		D187883827DA744C005399D4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -255,8 +257,17 @@
 		D17A0B882805ECDE002877C0 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				D17A0B892805FB87002877C0 /* InputFields */,
 			);
 			path = Commons;
+			sourceTree = "<group>";
+		};
+		D17A0B892805FB87002877C0 /* InputFields */ = {
+			isa = PBXGroup;
+			children = (
+				D17A0B8A2805FB9D002877C0 /* InputFields.swift */,
+			);
+			path = InputFields;
 			sourceTree = "<group>";
 		};
 		D19C956C27F37B6700064F91 /* BookCommentsCell */ = {
@@ -683,6 +694,7 @@
 				D12DDD8027EBAB0C00E58C77 /* BookDetailsView.swift in Sources */,
 				D1CCAF7527E4F83A00360B12 /* LibraryView.swift in Sources */,
 				D1BCBA072805A5F400040EB2 /* SuggestBookViewModel.swift in Sources */,
+				D17A0B8B2805FB9D002877C0 /* InputFields.swift in Sources */,
 				D1150D6327CFEE9700BF7A5C /* LibraryViewController.swift in Sources */,
 				D118F00227EE3692000FF5D6 /* BookDetailsViewModel.swift in Sources */,
 				D187883C27DA8A5F005399D4 /* TabBarController.swift in Sources */,
