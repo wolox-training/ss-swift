@@ -78,6 +78,7 @@ extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
         let book = viewModel.books[indexPath.row]
         let bookDetailsViewModel = BookDetailsViewModel(book: book)
         let bookDetailsViewController = BookDetailsViewController(bookDetailsViewModel: bookDetailsViewModel)
+        bookDetailsViewController.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(bookDetailsViewController, animated: true)
     }
 }

@@ -33,7 +33,6 @@ final class BookDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBarController?.tabBar.isHidden = true
         setUpNavBar()
         addSection(bookCommentsCardViewController, bookDetailsView.commentsCard)
         addSection(bookDetailsCardViewController, bookDetailsView.detailsCard)
