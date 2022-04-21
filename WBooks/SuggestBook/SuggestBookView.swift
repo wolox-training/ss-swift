@@ -54,9 +54,9 @@ final class SuggestBookView: NibView {
         }
     }
     
-    @IBOutlet weak var bookTopic: InputFields! {
+    @IBOutlet weak var bookGenre: InputFields! {
         didSet {
-            bookTopic.placeholder = "TOPIC".localized()
+            bookGenre.placeholder = "GENRE".localized()
         }
     }
     
@@ -66,7 +66,30 @@ final class SuggestBookView: NibView {
         }
     }
     
+    var onAddNewButton: (() -> Void)?
+    var onSubmitButton: (() -> Void)?
+    
     @IBAction func addNewButtonPress(_ sender: Any) {
-        print("ouch")
+        onAddNewButton?()
+    }
+    
+    @IBAction func submitButtonPress(_ sender: Any) {
+        onSubmitButton?()
+    }
+    
+    func checkFieldsNotEmpty() -> Bool {
+        let check = bookName.text!.isNotEmpty && bookAuthor.text!.isNotEmpty &&
+        bookYear.text!.isNotEmpty && bookGenre.text!.isNotEmpty &&
+        bookDescription.text!.isNotEmpty
+        return check
+    }
+    
+    func resetForm() {
+        bookName.text = ""
+        bookAuthor.text = ""
+        bookYear.text = ""
+        bookDescription.text = ""
+        bookGenre.text = ""
+        bookImage.image = UIImage(named: "ic_add new active")
     }
 }

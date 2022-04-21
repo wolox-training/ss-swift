@@ -17,6 +17,12 @@ open class InputFields: UITextField {
             setup()
         }
     }
+    
+    @IBInspectable var borderColorRed: UIColor = UIColor.red {
+        didSet {
+            setup()
+        }
+    }
 
     @IBInspectable var borderWidth: CGFloat = 0.5 {
         didSet {
@@ -50,6 +56,11 @@ open class InputFields: UITextField {
     }
 
     func setup() {
+        /*if self.text!.isEmpty {
+            border.borderColor = self.borderColorRed.cgColor
+        } else {
+            border.borderColor = self.borderColor.cgColor
+        }*/
         border.borderColor = self.borderColor.cgColor
         border.borderWidth = borderWidth
         self.layer.addSublayer(border)

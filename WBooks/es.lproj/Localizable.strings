@@ -27,10 +27,20 @@
 
 /* ADD NEW BOOK */
 "SUGGEST_BOOK_TITLE" = "SUGERIR UN LIBRO";
-"CONFIRMAR" = "CONFIRMAR";
+"SUBMIT" = "CONFIRMAR";
+"GALLERY" = "Galería";
+"CANCEL" = "Cancelar";
+"CAMERA" = "Cámara";
+"INCOMPLETE_FORM" = "Formulario incompleto";
+"INCOMPLETE_FORM_MESSAGE" = "Todos los campos deben estar completos.";
+"SOMETHING_WRONG" = "Ops! Algo anda mal!";
+"NEW_BOOK_SUGGESTED" = "Nuevo libro sugerido";
+"NEW_BOOK_SUGGESTED_MESSAGE" = "La sugerencia se ha realizado con éxito.";
+"SOMETHING_WRONG_MESSAGE" = "No se ha podido realizar tu sugerencia, vuelve a intentarlo!";
+
 /* PLACEHOLDERS */
 "BOOK_NAME" = "Nombre del libro";
 "YEAR" = "Año";
 "AUTHOR" = "Autor";
-"TOPIC" = "Tema";
+"GENRE" = "Género";
 "DESCRIPTION" = "Descripción";
