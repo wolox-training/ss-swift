@@ -24,3 +24,23 @@
 "ALERT_TITLE" = "Book unavailable";
 "ALERT_MESSAGE" = "Ooops! The book is not available☹️";
 "OK" = "Ok";
+
+/* ADD NEW BOOK */
+"SUGGEST_BOOK_TITLE" = "SUGGEST BOOK";
+"SUBMIT" = "SUBMIT";
+"GALLERY" = "Gallery";
+"CANCEL" = "Cancel";
+"CAMERA" = "Camera";
+"INCOMPLETE_FORM" = "Incomplete form";
+"INCOMPLETE_FORM_MESSAGE" = "All fields must be completed.";
+"SOMETHING_WRONG" = "Oops! Something is wrong";
+"NEW_BOOK_SUGGESTED" = "New book suggested";
+"NEW_BOOK_SUGGESTED_MESSAGE" = "The suggestion has been successful.";
+"SOMETHING_WRONG_MESSAGE" = "Your suggestion could not be carried out, please try again!";
+
+/* PLACEHOLDERS */
+"BOOK_NAME" = "Book´s name";
+"YEAR" = "Year";
+"AUTHOR" = "Author";
+"GENRE" = "Genre";
+"DESCRIPTION" = "Description";

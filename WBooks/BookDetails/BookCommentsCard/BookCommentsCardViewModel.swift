@@ -32,7 +32,7 @@ class BookCommentsCardViewModel: BookCommentsCardViewModelProtocol {
             action()
         }
         let onError = { error in print(error) }
-        commentRepository.fetchComments(onSuccess: onSuccess, onError: onError, bookID: book.id)
+        commentRepository.fetchComments(onSuccess: onSuccess, onError: onError, bookID: book.id!)
     }
     
     func getCellViewModel(index: Int) -> BookCommentsCellModel {

@@ -23,7 +23,8 @@ class TabBarController: UITabBarController {
         let suggest = setUpTabBarItem(navigation: "suggest",
                                       title: "SUGGEST_TAB_BAR_BUTTON",
                                       image: "ic_add new", tag: 2,
-                                      controller: LibraryViewController())
+                                      controller: SuggestBookViewController(
+                                        suggestBookViewModel: SuggestBookViewModel()))
         let myRentals = setUpTabBarItem(navigation: "myRentals",
                                         title: "RENTALS_TAB_BAR_BUTTON",
                                         image: "ic_myrentals",
