@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 @IBDesignable
-open class InputFields: UITextField {
+internal class InputFields: UITextField {
     let border = CALayer()
 
     @IBInspectable var borderColor: UIColor = UIColor.gray {
@@ -56,12 +56,7 @@ open class InputFields: UITextField {
     }
 
     func setup() {
-        /*if self.text!.isEmpty {
-            border.borderColor = self.borderColorRed.cgColor
-        } else {
-            border.borderColor = self.borderColor.cgColor
-        }*/
-        border.borderColor = self.borderColor.cgColor
+        border.borderColor = borderColor.cgColor
         border.borderWidth = borderWidth
         self.layer.addSublayer(border)
         self.layer.masksToBounds = true

@@ -25,7 +25,6 @@
 		D13E89DD27E8EF75006995D9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13E89DC27E8EF75006995D9 /* LoginView.swift */; };
 		D13E89DF27E8EF8E006995D9 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D13E89DE27E8EF8E006995D9 /* LoginView.xib */; };
 		D14E68D927FB2AF8001F0849 /* ImageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14E68D827FB2AF8001F0849 /* ImageConstants.swift */; };
-		D152434E280DE18200217321 /* BookRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D152434D280DE18200217321 /* BookRequest.swift */; };
 		D17A0B8B2805FB9D002877C0 /* InputFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17A0B8A2805FB9D002877C0 /* InputFields.swift */; };
 		D18533A527FB8AD70022233A /* BookDetailsCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D18533A427FB8AD70022233A /* BookDetailsCardView.xib */; };
 		D18533A727FB8C580022233A /* BookCommentsCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D18533A627FB8C580022233A /* BookCommentsCardView.xib */; };
@@ -105,7 +104,6 @@
 		D13E89DC27E8EF75006995D9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D13E89DE27E8EF8E006995D9 /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		D14E68D827FB2AF8001F0849 /* ImageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageConstants.swift; sourceTree = "<group>"; };
-		D152434D280DE18200217321 /* BookRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRequest.swift; sourceTree = "<group>"; };
 		D17A0B8A2805FB9D002877C0 /* InputFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFields.swift; sourceTree = "<group>"; };
 		D18533A427FB8AD70022233A /* BookDetailsCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookDetailsCardView.xib; sourceTree = "<group>"; };
 		D18533A627FB8C580022233A /* BookCommentsCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCommentsCardView.xib; sourceTree = "<group>"; };
@@ -231,7 +229,6 @@
 				D1CF93D927F227D6009E3F84 /* RentResponse.swift */,
 				D19C957327F386C000064F91 /* Comment.swift */,
 				D110BE2827F4963200EA28D9 /* User.swift */,
-				D152434D280DE18200217321 /* BookRequest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -712,7 +709,6 @@
 				D19F46D027F6494400C78465 /* BookCommentsCardViewController.swift in Sources */,
 				D1BCBA052805A5BD00040EB2 /* SuggestBookView.swift in Sources */,
 				D1156E39280498160029FAB8 /* BookCommentsCellModel.swift in Sources */,
-				D152434E280DE18200217321 /* BookRequest.swift in Sources */,
 				D1CF93D627F204E4009E3F84 /* RentRepository.swift in Sources */,
 				D19F46C227F6335300C78465 /* BookDetailsCardView.swift in Sources */,
 				D1BCBA092805A61800040EB2 /* SuggestBookViewController.swift in Sources */,

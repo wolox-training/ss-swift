@@ -9,7 +9,6 @@ import Foundation
 import WolmoCore
 
 final class SuggestBookView: NibView {
-    
     @IBOutlet var generalView: UIView! {
         didSet {
             generalView.backgroundColor = .backgroundGray

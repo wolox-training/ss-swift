@@ -26,7 +26,7 @@ internal class BookRepository: BookRepositoryProtocol {
     
     public func addBook( onSuccess: @escaping (Book) -> Void,
                          onError: @escaping (Error) -> Void,
-                         parameters: BookRequest) {
+                         parameters: Book) {
         let url = URL(string: "https://ios-training-backend.herokuapp.com/api/v1/books")!
         AF.request(url, method: .post, parameters: parameters,
                    encoder: JSONParameterEncoder.default)

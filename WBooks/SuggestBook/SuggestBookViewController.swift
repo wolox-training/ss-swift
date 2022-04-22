@@ -58,20 +58,19 @@ final class SuggestBookViewController: UIViewController, UINavigationControllerD
     
     func submitSuggestion() {
         if suggestBookView.checkFieldsNotEmpty() {
-            suggestBookViewModel.getParametersBook(author: suggestBookView.bookAuthor.text!,
+            let book = suggestBookViewModel.getParametersBook(author: suggestBookView.bookAuthor.text!,
                                   title: suggestBookView.bookName.text!,
                                   genre: suggestBookView.bookGenre.text!,
                                   year: suggestBookView.bookYear.text!)
-            suggestBookViewModel.suggestBook { error in
+            suggestBookViewModel.suggestBook(bookRequest: book) { error in
                 if error != nil {
-                    self.showAlertTextFields(title: "NEW_BOOK_SUGGESTED".localized(),
-                                             message: "NEW_BOOK_SUGGESTED_MESSAGE".localized())
-                    self.suggestBookView.resetForm()
-                } else {
                     self.showAlertTextFields(title: "SOMETHING_WRONG".localized(),
                                              message: "SOMETHING_WRONG_MESSAGE".localized())
-                    self.suggestBookView.resetForm()
+                } else {
+                    self.showAlertTextFields(title: "NEW_BOOK_SUGGESTED".localized(),
+                                             message: "NEW_BOOK_SUGGESTED_MESSAGE".localized())
                 }
+                self.suggestBookView.resetForm()
             }
         } else {
             showAlertTextFields(title: "INCOMPLETE_FORM".localized(), message: "INCOMPLETE_FORM_MESSAGE".localized())
@@ -81,12 +80,11 @@ final class SuggestBookViewController: UIViewController, UINavigationControllerD
     func showAlertTextFields(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK".localized(), style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        present(alert, animated: true, completion: nil)
     }
 }
 
 extension SuggestBookViewController: UIImagePickerControllerDelegate {
-    
     func chooseImageUbicationAlert() {
         let alertController = UIAlertController(title: .none, message: .none, preferredStyle: .actionSheet)
         let chooseAction = UIAlertAction(title: "GALLERY".localized(), style: .default) { _ in

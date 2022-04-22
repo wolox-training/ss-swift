@@ -41,7 +41,7 @@ public class BookDetailsCardViewModel: BookDetailsCardViewModelProtocol {
         let theCalendar = Calendar.current
         let nextDate = theCalendar.date(byAdding: .day, value: 1, to: today)
         let parameters = Rent(userID: userID,
-                              bookID: book.id,
+                              bookID: book.id!,
                               fromDate: formatter.string(from: today),
                               toDate: formatter.string(from: nextDate!)
         )
