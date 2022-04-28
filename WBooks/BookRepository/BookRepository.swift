@@ -9,6 +9,9 @@ import Alamofire
 
 protocol BookRepositoryProtocol {
     func fetchBooks(onSuccess: @escaping ([Book]) -> Void, onError: @escaping (Error) -> Void)
+    func addBook(onSuccess: @escaping (Book) -> Void, onError: @escaping (Error) -> Void,
+                 parameters: Book)
+    func getBook(onSuccess: @escaping (Book) -> Void, onError: @escaping (Error) -> Void, bookId: Int)
 }
 
 internal class BookRepository: BookRepositoryProtocol {
@@ -31,6 +34,18 @@ internal class BookRepository: BookRepositoryProtocol {
         AF.request(url, method: .post, parameters: parameters,
                    encoder: JSONParameterEncoder.default)
         .responseDecodable(of: Book.self) { response in
+            switch response.result {
+            case .success(let book):
+                onSuccess(book)
+            case .failure(let error):
+                onError(error)
+            }
+        }
+    }
+    
+    public func getBook(onSuccess: @escaping (Book) -> Void, onError: @escaping (Error) -> Void, bookId: Int) {
+        let url = URL(string: "https://ios-training-backend.herokuapp.com/api/v1/books/\(bookId)")!
+        AF.request(url, method: .get).responseDecodable(of: Book.self) { response in
             switch response.result {
             case .success(let book):
                 onSuccess(book)

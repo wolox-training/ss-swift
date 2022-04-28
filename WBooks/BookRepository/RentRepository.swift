@@ -13,6 +13,7 @@ protocol RentRepositoryProtocol {
                   onError: @escaping (Error) -> Void,
                   parameters: Rent,
                   userID: Int)
+    func fetchRentals(onSuccess: @escaping ([RentResponse]) -> Void, onError: @escaping (Error) -> Void, userID: Int)
 }
 
 internal class RentRepository: RentRepositoryProtocol {
@@ -27,6 +28,20 @@ internal class RentRepository: RentRepositoryProtocol {
             switch response.result {
             case .success(let rent):
                 onSuccess(rent)
+            case .failure(let error):
+                onError(error)
+            }
+        }
+    }
+    
+    public func fetchRentals(onSuccess: @escaping ([RentResponse]) -> Void,
+                             onError: @escaping (Error) -> Void,
+                             userID: Int) {
+        let url = URL(string: "https://ios-training-backend.herokuapp.com/api/v1/users/\(userID)/rents")!
+        AF.request(url, method: .get).responseDecodable(of: [RentResponse].self) { response in
+            switch response.result {
+            case .success(let rents):
+                onSuccess(rents)
             case .failure(let error):
                 onError(error)
             }

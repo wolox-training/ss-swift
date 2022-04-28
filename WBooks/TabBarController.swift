@@ -29,7 +29,8 @@ class TabBarController: UITabBarController {
                                         title: "RENTALS_TAB_BAR_BUTTON",
                                         image: "ic_myrentals",
                                         tag: 3,
-                                        controller: LibraryViewController())
+                                        controller: BookRentalsViewController(
+                                         bookRentalsViewModel: BookRentalsViewModel()))
         tabBar.backgroundColor = .white
         tabBar.barTintColor = .white
         viewControllers = [library, wishlist, suggest, myRentals]
