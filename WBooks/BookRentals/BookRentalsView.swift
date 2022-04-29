@@ -14,6 +14,11 @@ final class BookRentalsView: NibView {
             view.backgroundColor = .backgroundGray
         }
     }
+    @IBOutlet weak var collectionTitle: UILabel! {
+        didSet {
+            collectionTitle.text = "SUGGESTIONS".localized()
+        }
+    }
     @IBOutlet weak var myRentalsCard: UIView!
     @IBOutlet weak var suggestionsCard: UIView!
 }

@@ -12,12 +12,16 @@ final class BookRentalsViewController: UIViewController {
     private let bookRentalsView = BookRentalsView()
     private let bookRentalsViewModel: BookRentalsViewProtocol
     private let bookRentalsCardViewController: BookRentalsCardViewController
+    private let bookSuggestionsCardViewController: BookSuggestionsCardViewController
 
     init(bookRentalsViewModel: BookRentalsViewModel) {
         self.bookRentalsViewModel = bookRentalsViewModel
         let bookRentalsCardViewModel = bookRentalsViewModel.bookRentalsCardViewModel()
+        let bookSuggestionsCardViewModel = bookRentalsViewModel.bookSuggestionsCardViewModel()
         bookRentalsCardViewController = BookRentalsCardViewController(
             bookRentalsCardViewModel: bookRentalsCardViewModel)
+        bookSuggestionsCardViewController = BookSuggestionsCardViewController(
+            bookSuggestionsCardViewModel: bookSuggestionsCardViewModel)
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -33,6 +37,7 @@ final class BookRentalsViewController: UIViewController {
         super.viewDidLoad()
         setUpNavBar()
         addSection(bookRentalsCardViewController, bookRentalsView.myRentalsCard)
+        addSection(bookSuggestionsCardViewController, bookRentalsView.suggestionsCard)
     }
     
     private func addSection(_ child: UIViewController, _ viewFrame: UIView) {

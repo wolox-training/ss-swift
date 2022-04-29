@@ -9,10 +9,15 @@ import Foundation
 
 protocol BookRentalsViewProtocol {
     func bookRentalsCardViewModel() -> BookRentalsCardViewModel
+    func bookSuggestionsCardViewModel() -> BookSuggestionsCardViewModel
 }
 
 final class BookRentalsViewModel: BookRentalsViewProtocol {
     func bookRentalsCardViewModel() -> BookRentalsCardViewModel {
         return BookRentalsCardViewModel()
+    }
+    
+    func bookSuggestionsCardViewModel() -> BookSuggestionsCardViewModel {
+        return BookSuggestionsCardViewModel()
     }
 }

@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookRentalsView" customModule="WBooks" customModuleProvider="target">
             <connections>
+                <outlet property="collectionTitle" destination="wGh-3T-qkm" id="0P1-L7-AIA"/>
                 <outlet property="myRentalsCard" destination="wQ7-Df-7em" id="Htf-wz-egY"/>
                 <outlet property="suggestionsCard" destination="Fp6-iC-lwJ" id="UgJ-bW-ucN"/>
                 <outlet property="view" destination="jEb-kt-ms3" id="TxA-Tn-MWq"/>
@@ -27,28 +28,36 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fp6-iC-lwJ">
-                    <rect key="frame" x="20" y="447" width="335" height="211"/>
-                    <color key="backgroundColor" systemColor="linkColor"/>
+                    <rect key="frame" x="35" y="457" width="305" height="201"/>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGh-3T-qkm">
+                    <rect key="frame" x="35" y="447" width="305" height="0.0"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Xlr-Lb-Lu4"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="iTh-Z4-L5m"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="Fp6-iC-lwJ" firstAttribute="leading" secondItem="iTh-Z4-L5m" secondAttribute="leading" constant="20" id="0pq-FQ-SEr"/>
-                <constraint firstItem="iTh-Z4-L5m" firstAttribute="bottom" secondItem="Fp6-iC-lwJ" secondAttribute="bottom" constant="9" id="5I5-SI-4lJ"/>
+                <constraint firstItem="iTh-Z4-L5m" firstAttribute="bottom" secondItem="Fp6-iC-lwJ" secondAttribute="bottom" constant="9" id="1iK-d0-Hhm"/>
+                <constraint firstItem="iTh-Z4-L5m" firstAttribute="trailing" secondItem="Fp6-iC-lwJ" secondAttribute="trailing" constant="35" id="IqW-f2-eDE"/>
                 <constraint firstAttribute="leading" secondItem="wQ7-Df-7em" secondAttribute="leading" id="Log-v4-DPt"/>
+                <constraint firstItem="iTh-Z4-L5m" firstAttribute="trailing" secondItem="wGh-3T-qkm" secondAttribute="trailing" constant="35" id="Qmo-ot-VcH"/>
                 <constraint firstAttribute="trailing" secondItem="wQ7-Df-7em" secondAttribute="trailing" id="SWW-Hn-CaI"/>
-                <constraint firstItem="Fp6-iC-lwJ" firstAttribute="top" secondItem="wQ7-Df-7em" secondAttribute="bottom" constant="12" id="XEn-6U-y0f"/>
                 <constraint firstItem="wQ7-Df-7em" firstAttribute="top" secondItem="iTh-Z4-L5m" secondAttribute="top" constant="35" id="qMg-XE-47h"/>
-                <constraint firstItem="iTh-Z4-L5m" firstAttribute="trailing" secondItem="Fp6-iC-lwJ" secondAttribute="trailing" constant="20" id="y8a-YD-exf"/>
+                <constraint firstItem="Fp6-iC-lwJ" firstAttribute="top" secondItem="wGh-3T-qkm" secondAttribute="bottom" constant="10" id="qV6-pK-Eay"/>
+                <constraint firstItem="wGh-3T-qkm" firstAttribute="leading" secondItem="iTh-Z4-L5m" secondAttribute="leading" constant="35" id="sx4-vt-M3w"/>
+                <constraint firstItem="Fp6-iC-lwJ" firstAttribute="leading" secondItem="iTh-Z4-L5m" secondAttribute="leading" constant="35" id="u25-f8-5Fl"/>
+                <constraint firstItem="wGh-3T-qkm" firstAttribute="top" secondItem="wQ7-Df-7em" secondAttribute="bottom" constant="12" id="yzE-RH-OFR"/>
             </constraints>
-            <point key="canvasLocation" x="314" y="100"/>
+            <point key="canvasLocation" x="312.80000000000001" y="99.400299850074973"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

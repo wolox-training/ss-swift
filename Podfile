@@ -9,6 +9,7 @@ target 'WBooks' do
   pod 'Alamofire'
   pod 'WolmoCore'
   pod 'SwiftLint'
+  pod 'AlamofireImage', '~> 4.1'
 
   target 'WBooksTests' do
     inherit! :search_paths

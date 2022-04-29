@@ -46,7 +46,6 @@ final class BookRentalsCardViewController: UIViewController {
 }
 
 extension BookRentalsCardViewController: UITableViewDelegate, UITableViewDataSource {
-    // MARK: - Table view data source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return bookRentalsCardViewModel.books.count
     }
@@ -63,7 +62,8 @@ extension BookRentalsCardViewController: UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let book = bookRentalsCardViewModel.books[indexPath.row]
+        var book = bookRentalsCardViewModel.books[indexPath.row]
+        book.status = "IN_YOUR_HANDS".localized()
         let bookDetailsViewModel = BookDetailsViewModel(book: book)
         let bookDetailsViewController = BookDetailsViewController(bookDetailsViewModel: bookDetailsViewModel)
         bookDetailsViewController.hidesBottomBarWhenPushed = true

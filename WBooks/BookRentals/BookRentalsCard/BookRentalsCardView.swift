@@ -9,7 +9,6 @@ import UIKit
 import WolmoCore
 
 final class BookRentalsCardView: NibView {
-    
     @IBOutlet var rentalsView: UIView!
     @IBOutlet weak var rentalsTableView: UITableView!
 }
