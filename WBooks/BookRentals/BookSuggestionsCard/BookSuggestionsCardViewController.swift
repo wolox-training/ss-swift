@@ -57,4 +57,8 @@ extension BookSuggestionsCardViewController: UICollectionViewDelegate, UICollect
         cell.setImages(url: book.link)
         return cell
     }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
 }

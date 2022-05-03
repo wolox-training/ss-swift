@@ -27,9 +27,7 @@
             <viewLayoutGuide key="safeArea" id="IhU-g2-lMT"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstAttribute="width" constant="335" id="Dwz-3t-zAl"/>
                 <constraint firstItem="jYf-L4-Zb5" firstAttribute="leading" secondItem="IhU-g2-lMT" secondAttribute="leading" id="FZ2-3f-ZA1"/>
-                <constraint firstAttribute="height" constant="400" id="LaK-Fv-TO4"/>
                 <constraint firstItem="IhU-g2-lMT" firstAttribute="trailing" secondItem="jYf-L4-Zb5" secondAttribute="trailing" id="OkZ-mA-jAV"/>
                 <constraint firstItem="IhU-g2-lMT" firstAttribute="bottom" secondItem="jYf-L4-Zb5" secondAttribute="bottom" id="XFV-t0-KcL"/>
                 <constraint firstItem="jYf-L4-Zb5" firstAttribute="top" secondItem="IhU-g2-lMT" secondAttribute="top" id="Zdw-ha-WXf"/>

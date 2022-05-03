@@ -22,16 +22,16 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wQ7-Df-7em">
-                    <rect key="frame" x="0.0" y="35" width="375" height="400"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="400" id="9fq-XW-sMk"/>
-                    </constraints>
+                    <rect key="frame" x="0.0" y="35" width="375" height="520"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fp6-iC-lwJ">
-                    <rect key="frame" x="35" y="457" width="305" height="201"/>
+                    <rect key="frame" x="35" y="557" width="305" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="Vva-WH-Q0U"/>
+                    </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGh-3T-qkm">
-                    <rect key="frame" x="35" y="447" width="305" height="0.0"/>
+                    <rect key="frame" x="35" y="567" width="305" height="0.0"/>
                     <constraints>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Xlr-Lb-Lu4"/>
                     </constraints>
@@ -43,13 +43,13 @@
             <viewLayoutGuide key="safeArea" id="iTh-Z4-L5m"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="iTh-Z4-L5m" firstAttribute="bottom" secondItem="Fp6-iC-lwJ" secondAttribute="bottom" constant="9" id="1iK-d0-Hhm"/>
+                <constraint firstItem="iTh-Z4-L5m" firstAttribute="bottom" secondItem="Fp6-iC-lwJ" secondAttribute="bottom" constant="10" id="1iK-d0-Hhm"/>
                 <constraint firstItem="iTh-Z4-L5m" firstAttribute="trailing" secondItem="Fp6-iC-lwJ" secondAttribute="trailing" constant="35" id="IqW-f2-eDE"/>
                 <constraint firstAttribute="leading" secondItem="wQ7-Df-7em" secondAttribute="leading" id="Log-v4-DPt"/>
                 <constraint firstItem="iTh-Z4-L5m" firstAttribute="trailing" secondItem="wGh-3T-qkm" secondAttribute="trailing" constant="35" id="Qmo-ot-VcH"/>
                 <constraint firstAttribute="trailing" secondItem="wQ7-Df-7em" secondAttribute="trailing" id="SWW-Hn-CaI"/>
                 <constraint firstItem="wQ7-Df-7em" firstAttribute="top" secondItem="iTh-Z4-L5m" secondAttribute="top" constant="35" id="qMg-XE-47h"/>
-                <constraint firstItem="Fp6-iC-lwJ" firstAttribute="top" secondItem="wGh-3T-qkm" secondAttribute="bottom" constant="10" id="qV6-pK-Eay"/>
+                <constraint firstItem="Fp6-iC-lwJ" firstAttribute="top" secondItem="wGh-3T-qkm" secondAttribute="bottom" constant="-10" id="qV6-pK-Eay"/>
                 <constraint firstItem="wGh-3T-qkm" firstAttribute="leading" secondItem="iTh-Z4-L5m" secondAttribute="leading" constant="35" id="sx4-vt-M3w"/>
                 <constraint firstItem="Fp6-iC-lwJ" firstAttribute="leading" secondItem="iTh-Z4-L5m" secondAttribute="leading" constant="35" id="u25-f8-5Fl"/>
                 <constraint firstItem="wGh-3T-qkm" firstAttribute="top" secondItem="wQ7-Df-7em" secondAttribute="bottom" constant="12" id="yzE-RH-OFR"/>
