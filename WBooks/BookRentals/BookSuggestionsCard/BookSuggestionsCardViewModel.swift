@@ -20,8 +20,7 @@ final class BookSuggestionsCardViewModel: BookSuggestionsCardViewProtocol {
         let onSuccess = { (suggestions: [Suggestion]) in
             self.suggestions = suggestions
             self.suggestions.removeAll(where: { suggestion in
-                let link = suggestion.link
-                return link == "https://www.google.com/"
+                return suggestion.link == "https://www.google.com/"
             })
             action()
         }

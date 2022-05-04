@@ -28,6 +28,11 @@ final class BookRentalsCardViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpRentalsTable()
+        loadRents()
+    }
+    
+    private func setUpRentalsTable(){
         guard let table = bookRentalsCardView.rentalsTableView else { return }
         table.register(
             UINib(nibName: cellIdentifier, bundle: nil),
@@ -35,7 +40,6 @@ final class BookRentalsCardViewController: UIViewController {
         table.backgroundColor = .backgroundGray
         table.delegate = self
         table.dataSource = self
-        loadRents()
     }
     
     private func loadRents() {
@@ -55,9 +59,7 @@ extension BookRentalsCardViewController: UITableViewDelegate, UITableViewDataSou
                 as? LibraryViewCell else { return UITableViewCell() }
         cell.separatorInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: UIScreen.main.bounds.width)
         let book = bookRentalsCardViewModel.books[indexPath.row]
-        cell.bookTitle.text = book.title
-        cell.bookAuthor.text = book.author
-        cell.bookCover.image = .cover
+        cell.setUpCell(book: book)
         return cell
     }
     

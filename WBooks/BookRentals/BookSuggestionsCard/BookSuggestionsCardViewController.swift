@@ -27,6 +27,11 @@ final class BookSuggestionsCardViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpSuggestColecction()
+        loadSuggestions()
+    }
+    
+    private func setUpSuggestColecction(){
         guard let collection = bookSuggestionsCardView.suggestionsCollection else { return }
         collection.register(
             UINib(nibName: cellIdentifier, bundle: nil),
@@ -34,7 +39,6 @@ final class BookSuggestionsCardViewController: UIViewController {
         collection.backgroundColor = .backgroundGray
         collection.delegate = self
         collection.dataSource = self
-        loadSuggestions()
     }
     
     private func loadSuggestions() {
