@@ -31,7 +31,7 @@ final class BookSuggestionsCardViewController: UIViewController {
         loadSuggestions()
     }
     
-    private func setUpSuggestColecction(){
+    private func setUpSuggestColecction() {
         guard let collection = bookSuggestionsCardView.suggestionsCollection else { return }
         collection.register(
             UINib(nibName: cellIdentifier, bundle: nil),

@@ -32,7 +32,7 @@ final class BookRentalsCardViewController: UIViewController {
         loadRents()
     }
     
-    private func setUpRentalsTable(){
+    private func setUpRentalsTable() {
         guard let table = bookRentalsCardView.rentalsTableView else { return }
         table.register(
             UINib(nibName: cellIdentifier, bundle: nil),
