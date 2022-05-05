@@ -28,4 +28,10 @@ final class LibraryViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+    
+    func setUpCell(book: Book) {
+        bookTitle.text = book.title
+        bookAuthor.text = book.author
+        bookCover.image = .cover
+    }
 }

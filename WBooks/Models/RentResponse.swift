@@ -8,13 +8,13 @@
 import Foundation
 
 public struct RentResponse: Decodable {
-     let from, toDate: String
+     let from, toDate: String?
      let id, bookID, userID: Int
     
     private enum CodingKeys: String, CodingKey {
         case toDate = "to"
-        case bookID
-        case userID
+        case bookID = "book_id"
+        case userID = "user_id"
         case id
         case from
     }

@@ -44,3 +44,8 @@
 "AUTHOR" = "Autor";
 "GENRE" = "Género";
 "DESCRIPTION" = "Descripción";
+
+/* MY RENTALS VIEW */
+"MY_RENTALS_TITLE" = "MIS ALQUILERES";
+"SUGGESTIONS" = "Sugerencias";
+"IN_YOUR_HANDS" = "En tus manos";
