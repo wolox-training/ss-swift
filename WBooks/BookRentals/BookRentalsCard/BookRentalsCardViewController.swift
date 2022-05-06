@@ -31,7 +31,7 @@ final class BookRentalsCardViewController: UIViewController {
         setUpRentalsTable()
         loadRents()
     }
-    
+
     private func setUpRentalsTable() {
         guard let table = bookRentalsCardView.rentalsTableView else { return }
         table.register(
@@ -43,8 +43,12 @@ final class BookRentalsCardViewController: UIViewController {
     }
     
     private func loadRents() {
+        let loadingView = UIView()
+        let spinner = UIActivityIndicatorView(style: .large)
+        showSpinner(view: bookRentalsCardView, loadingView: loadingView, spinner: spinner)
         bookRentalsCardViewModel.getRents { [weak self] in
             self?.bookRentalsCardView.rentalsTableView.reloadData()
+            self?.removeSpinner(loadingView: loadingView, spinner: spinner)
         }
     }
 }

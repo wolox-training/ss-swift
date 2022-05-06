@@ -30,8 +30,12 @@ final class LibraryViewController: UIViewController {
     }
     
     private func loadBooks() {
+        let loadingView = UIView()
+        let spinner = UIActivityIndicatorView(style: .large)
+        showSpinner(view: view, loadingView: loadingView, spinner: spinner)
         viewModel.getBooks { [weak self] in
             self?.libraryView.tableView.reloadData()
+            self?.removeSpinner(loadingView: loadingView, spinner: spinner)
         }
     }
 
