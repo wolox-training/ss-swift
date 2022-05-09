@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import UIKit
 
 protocol BookRentalsCardViewProtocol {
     var rents: [RentResponse] { get set }
