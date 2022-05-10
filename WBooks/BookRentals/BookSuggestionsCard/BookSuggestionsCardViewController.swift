@@ -42,8 +42,12 @@ final class BookSuggestionsCardViewController: UIViewController {
     }
     
     private func loadSuggestions() {
+        let loadingView = UIView()
+        let spinner = UIActivityIndicatorView(style: .large)
+        showSpinner(view: bookSuggestionsCardView, loadingView: loadingView, spinner: spinner)
         bookSuggestionsCardViewModel.getSuggestions { [weak self] in
             self?.bookSuggestionsCardView.suggestionsCollection.reloadData()
+            self?.removeSpinner(loadingView: loadingView, spinner: spinner)
         }
     }
 }
