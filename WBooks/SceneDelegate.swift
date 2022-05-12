@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         
         /// 3. Create a view hierarchy programmatically
-        let viewController = LoginViewController()
+        let viewController = LoginViewController(loginViewModel: LoginViewModel())
         let navigation = UINavigationController(rootViewController: viewController)
         
         /// 4. Set the root view controller of the window with your view controller

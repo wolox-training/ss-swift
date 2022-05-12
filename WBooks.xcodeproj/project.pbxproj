@@ -36,6 +36,7 @@
 		D13E89DD27E8EF75006995D9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13E89DC27E8EF75006995D9 /* LoginView.swift */; };
 		D13E89DF27E8EF8E006995D9 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D13E89DE27E8EF8E006995D9 /* LoginView.xib */; };
 		D14E68D927FB2AF8001F0849 /* ImageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14E68D827FB2AF8001F0849 /* ImageConstants.swift */; };
+		D171BBF2282D9FEF00883CC5 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171BBF1282D9FEF00883CC5 /* LoginViewModel.swift */; };
 		D177805B281C2F37000D16AE /* SuggestionsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D177805A281C2F37000D16AE /* SuggestionsViewCell.swift */; };
 		D177805D281C2F47000D16AE /* SuggestionsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D177805C281C2F47000D16AE /* SuggestionsViewCell.xib */; };
 		D17A0B8B2805FB9D002877C0 /* InputFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17A0B8A2805FB9D002877C0 /* InputFields.swift */; };
@@ -132,6 +133,7 @@
 		D13E89DC27E8EF75006995D9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D13E89DE27E8EF8E006995D9 /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		D14E68D827FB2AF8001F0849 /* ImageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageConstants.swift; sourceTree = "<group>"; };
+		D171BBF1282D9FEF00883CC5 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D177805A281C2F37000D16AE /* SuggestionsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsViewCell.swift; sourceTree = "<group>"; };
 		D177805C281C2F47000D16AE /* SuggestionsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestionsViewCell.xib; sourceTree = "<group>"; };
 		D17A0B8A2805FB9D002877C0 /* InputFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFields.swift; sourceTree = "<group>"; };
@@ -372,6 +374,7 @@
 				D1DC758D2799E69B002BB45E /* LoginViewController.swift */,
 				D13E89DC27E8EF75006995D9 /* LoginView.swift */,
 				D13E89DE27E8EF8E006995D9 /* LoginView.xib */,
+				D171BBF1282D9FEF00883CC5 /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -811,6 +814,7 @@
 				D19F46C227F6335300C78465 /* BookDetailsCardView.swift in Sources */,
 				D1BCBA092805A61800040EB2 /* SuggestBookViewController.swift in Sources */,
 				D1CF93D827F2262A009E3F84 /* Rent.swift in Sources */,
+				D171BBF2282D9FEF00883CC5 /* LoginViewModel.swift in Sources */,
 				D19F46CE27F6490E00C78465 /* BookCommentsCardViewModel.swift in Sources */,
 				D1072616281B1002005A71BD /* BookSuggestionsCardView.swift in Sources */,
 				D1150D6627D0F42600BF7A5C /* LibraryViewCell.swift in Sources */,
